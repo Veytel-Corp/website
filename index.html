@@ -1,11 +1,185 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is a basic HTML file displaying the classic "Hello, World!" message.</p>
-</body>
-</html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veytel</title>
 
+    <link
+      rel="stylesheet"
+      href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+      <a href="#" class="logo"
+        ><span><img src="veytel7.png" /></span
+      ></a>
+
+      <nav class="navbar">
+        
+          <a href="#home">Home</a>
+          <a href="#products">Our Products</a>
+          <a href="#about">Our Mission</a>
+          <a href="#team">Our Team</a>
+          <a href="#contact">Contact Us</a>
+        
+      </nav>
+
+      <div class="icons"></div>
+    </header>
+    <div class="login-form-container">
+      <i class="fas fa-times" id="form-close"></i>
+    </div>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Health Starts Here</h3>
+        <p>
+          Our mission is to create technology that helps clinicians provide
+          high-quality care to their patients in a more efficient and
+          streamlined manner.
+        </p>
+        <a href="#products" class="btn">Learn More</a>
+      </div>
+
+      <div class="controls">
+        <span class="vid-btn active" data-src="video1.mp4"></span>
+        <span class="vid-btn" data-src="video2.mp4"></span>
+        <span class="vid-btn" data-src="video3.mp4"></span>
+      </div>
+      <div class="video-container">
+        <video src="video1.mp4" id="video-slider" loop autoplay muted></video>
+      </div>
+      <style>
+        video {
+            filter: brightness(50%);
+        }
+    </style>
+    </section>
+
+    <!-- product section -->
+    <section class="product" id="products">
+      
+      <h1 class="heading">
+        
+        <span>Our Products</span>
+        <br>
+        <br>
+        <hr>
+        <br>
+      </h1>
+      
+       <div class="leftright">
+        <div class="productOne">
+
+          <img src="headerphoto2.png">
+          <h1>PulSAR-AI</h1>
+          <br />
+          <h2>Pulmonary Disease Assessment for Radiology <br/> Using AI
+          <br/>
+          <p>
+              PalSAR-AI Improves patient outcomes with accurate metrics and overall lower
+              healthcare costs. It also reduces the workload and patient count for ERs and the ICU. <br/>
+          </p>
+          <br>
+          
+        </div>
+        <br>
+        <br>
+        <div class="productTwo">
+          <img src="headerphoto1.png">
+          <h1>DermaViz</h1>
+          <br />
+          
+          <h2>Melanoma Assistant for Early Detection</h2>
+          <br />
+          <p>
+            DermViz provides precise alignment of moles across dates and accurate mole
+            change assessment screening (across all moles) through iDermViewer Scope 
+            assessment for measurement and change in single nevus of concern. <br/>
+          </p>
+          <br>
+        </div>
+      </div> 
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+    <!-- Mission Section -->
+    <img class ="missionphoto" src="headerphoto3.png" id="about">
+    <section class="mission" >
+      
+      <h1 class="heading">
+        
+       <span>Our Mission</span>
+      </h1>
+      
+      <hr>
+      <div class="statement">
+        
+        <p>
+          "Veytel is dedicated to creating AI & computer vision technologies – to
+          improve quality of life..."  
+        </p>
+        
+      </div>
+      <br>
+      <div class="button-container"><a href="missionpage.html" class="btn2">Read More</a></div>
+      <br>
+      <br>
+      
+    </section>
+    <br>
+    <br>
+
+    <!-- quote section -->
+    <section class="quote" id="quote">
+      <h1 class="heading">
+        <span>What Professionals are saying about Veytel </span>
+      </h1>
+      <hr>
+      <br>
+      <br>
+        <div class="slideshow">
+          <div class="slides">
+            <img src="quotes/quote1.png">
+          </div>
+          <div class="slides">
+            <img src="quotes/quote2.png">
+          </div>
+          <div class="slides">
+            <img src="quotes/quote3.png">
+          </div>
+          <div class="slider-btn-container">
+            <a class="slider-btn previous" onclick="setSlides(-1)"></a>
+            <a class="slider-btn next" onclick="setSlides(1)"></a>
+          </div>
+        </div>
+        <script src="slideshowScript.js"></script>
+        
+      <br>
+      <br>
+
+
+      <!-- Contact Section -->
+<section class="contactUs">
+<h1>Any Questions?</h1>
+<h2>Feel free to reach out.</h2>
+<div class="button-container"><a href="contact.html" class="btn">Contact Us</a></div>
+
+
+
+</section>
+      
+
+    <script src="script.js"></script>
+  </body>
+</html>

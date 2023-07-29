@@ -1,0 +1,48 @@
+<!-- contact us page -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel= "stylesheet" type= "text/css" href="contact.css">
+  </head>
+
+  <!-- nav bar  -->
+  <body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="#" class="logo"><span></span>VEYTEL</a>
+  
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="#products">Our Products</a>
+          <a href="#about">Our Mission</a>
+          <a href="#team">Our Team</a>
+          <a href="./contact.html">Contact Us</a>
+        </nav>
+
+    </header>
+
+    <!-- contact form -->
+    <section class="contact" id="form">
+        <div class="content-title">
+            <h1>Have questions? Want to connect?</h1>
+            <h2>Leave us a message below</h2>
+        </div>
+
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="contact-form-handler.php">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+            <br>
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+            <br>
+            <textarea name="message" class="form-control" placeholder="Message" row=4 required></textarea>
+            <br>
+            <input type="submit" class="form-control submit" value="Send Message">
+
+           </form>
+
+  </body>
+</html>

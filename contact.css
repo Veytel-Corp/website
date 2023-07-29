@@ -1,0 +1,127 @@
+/* 
+contact form 
+ */
+
+
+:root{
+    --veytel-blue: #4a5cff;
+
+}
+
+*{
+    font-family: Gill Sans MT;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: captalize;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+
+    background:var(--orange);
+    color: #4486ff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--veytel-blue);
+    z-index: 1000;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 2rem 9%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+header .logo{
+    font-size: 2.7rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+header .logo span{
+
+    color:var(--veytel-blue);
+}
+
+header .navbar a{
+
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 1rem;
+    justify-content: left; 
+}
+
+header .navbar a:hover{
+
+    color: lightblue;
+}
+
+/* background */
+body{
+    margin: 0;
+    padding: 0;
+    margin-top: 9rem; /* Adjust the value as needed */
+    padding-top: 9rem;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)), url(contact_photo.jpg);
+    background-size: cover;
+    background-position: top;
+    font-family: Gill Sans MT;
+    color:rgb(255, 255, 255);
+    font-size: 23px;
+    
+}
+
+/* submit button */
+.form-control{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+input{
+    height: 45px;
+}
+
+form .submit{
+    background: #4a5cff;
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+
+}
+
+form .submit:hover{
+    background-color:#4486ff;
+    cursor: pointer;
+}
