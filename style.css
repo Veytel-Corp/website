@@ -1,11 +1,15 @@
 
 :root{
-    --veytel-blue: #4a5cff;
+    --veytel-blue: #071c42;
 
 }
 
+/** #7092da **/
+
+/** #0094fd; **/
+
 *{
-    font-family: Gill Sans MT;
+    font-family: Gill Sans MT, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -25,9 +29,13 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    overflow-y: scroll;
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
+    min-height: 100%;
 }
+
+
 
 section{
     padding: 2rem 9%;
@@ -64,7 +72,7 @@ header .navbar a{
     color: #fff;
     font-size: 2rem;
     margin: 0 1rem;
-    border-left: 2px solid white;
+    border-left: 2px solid #3dcab1;
     margin: 0 auto;
     padding: 0 30px;
     
@@ -83,7 +91,9 @@ header .navbar a:hover{
 }
 
 body{
-    height: 200rem;
+    height: 0rem;
+    min-height: 100%;
+    
 }
 
 #menu-bar{
@@ -161,7 +171,7 @@ body{
 
 .btn{
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 4rem;
     background: var(--veytel-blue);
     color: #fff;
     padding: .8rem 3rem;
@@ -171,7 +181,7 @@ body{
 }
 .btn:hover{
 
-    background: lightblue;
+    background: rgb(255, 255, 255);
     color: var(--veytel-blue);
 }
 
@@ -192,9 +202,10 @@ body{
     background: white;
     color: var(--veytel-blue);
     padding: .8rem 3rem;
-    border: .2rem solid white;
+    border: .2rem solid #3dcab1;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .home{
@@ -209,20 +220,29 @@ body{
 
 .home .content{
     text-align: center;
+    
 }
 
 .home .content h3{
     font-size: 4.5rem;
-    color: rgb(255, 255, 255);
+    color: var(--veytel-blue);
     text-transform: uppercase;
-    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .9);
+    text-shadow: 0 .1rem .5rem rgba(0, 0, 0, .1);
+    -webkit-text-stroke-width: .5px; 
+    -webkit-text-stroke-color: #ffffff; 
+    margin-bottom: 0rem;
 }
 
+
 .home .content p{
-    font-size: 2.7rem;
-    color: rgb(255, 255, 255);
+    margin-bottom: -3rem;
+    font-size: 3rem;
+    color: white;
     padding: .5rem 0;
-    text-shadow: 0 .3rem .5rem rgba(0,0,0,.9);
+    text-shadow: 0 .1rem .3rem rgba(0,0,0,.7);
+    -webkit-text-stroke-width: .1px; 
+    -webkit-text-stroke-color: black; 
+    
 }
 
 .home .video-container video{
@@ -256,33 +276,34 @@ body{
 }
 
 .home .controls .vid-btn.active{
-    background: var(--veytel-blue);
+    background: #3dcab1;
 
 }
 
 .heading{
     text-align: center;
     padding: 2.5rem 0;
+    
 }
 
 .heading span{
     font-size: 4.5rem;
     
-    color: var(--veytel-blue);
+    color: white;
     border-radius: .4rem;
     padding: .2rem 1rem;
 }
 
 
 .product{
-    background-image: linear-gradient(white, rgb(247, 251, 255) , white);
+    background-color: var(--veytel-blue);
 
     
     
 }
 
 .product .heading hr{
-    background-color: var(--veytel-blue);
+    background-color: #3dcab1;
     width: 50%;
     height: 1px;
     margin:auto;
@@ -307,12 +328,15 @@ body{
     max-width: 500px;
     height: 400px;
     margin-right: 30px;
-    
+    background-color:#3dcab1;
+    color: white;
     
     
     
     
 }
+
+/**#88daad **/
 
 .product .leftright .productOne h1{
     font-size: 3rem;
@@ -328,6 +352,7 @@ body{
     text-align: center;
     font-size: 1.8rem;
     font-weight: normal;
+    
 }
 
 .product .leftright .productTwo{
@@ -342,7 +367,7 @@ body{
     box-shadow: 0 .5rem .8rem rgba(0, 0, 0, 0.3);
     max-width: 500px;
     height: 400px;
-    
+    background-color:#3dcab1;
     
     
     
@@ -351,10 +376,12 @@ body{
 
 .product .leftright .productTwo h1{
     font-size: 3rem;
+    color: white;
 }
 
 .product .leftright .productTwo h2{
     font-size: 2rem;
+    color: white;
 }
 
 .product .leftright .productTwo p{
@@ -362,6 +389,7 @@ body{
     text-align: center;
     font-size: 1.8rem;
     font-weight: normal;
+    color: white;
     
 }
 
@@ -439,7 +467,7 @@ body{
 .mission hr{
     height: 1px;
     width: 50%;
-    background-color: white;
+    background-color: #3dcab1;
     margin: auto;
 }
 
@@ -501,6 +529,7 @@ body{
 .contactUs{
     margin: auto;
     text-align: center;
+    color: var(--veytel-blue)
 }
 
 .contactUs h1{
@@ -594,4 +623,94 @@ body{
     background-color: var(--veytel-blue);
     width: 50%;
     margin: auto;
+}
+
+.missionContainer{
+    
+    background-image: url(backgroundImage.jpg);
+    background-size: 200%;
+    background-position: center;
+    margin-top: 50px;    
+    opacity: .9;
+    -webkit-background-size: cover;
+
+}
+.missionBody{
+    
+    
+    text-align: center;
+    box-shadow: 0 .5rem .8rem rgba(0, 0, 0, 0.3);
+    margin:  auto;
+    margin-top: 3.5rem;
+    padding: 20px;
+    max-width: 900px;
+   
+    background-color: white;
+
+}
+.missionBody .missionTitle h1{
+    
+    max-width: 100%;
+    padding: 10px;
+    font-size: 50px;
+    background-color: var(--veytel-blue);
+    color: white;
+    
+    
+}
+
+.missionBody .statement p{
+    
+    text-align: left-justify;
+    max-width: 100%;
+    margin:auto;
+    font-size:25px;
+    padding: 40px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    
+    
+}
+
+.page-break{
+    page-break-after: always;
+    height: 0;
+    display:block;
+    clear:both;
+}
+
+.imageContainer{
+    text-align: center;
+    margin: auto;
+    margin-top: 13rem;
+
+    
+}
+
+.imageContainer .teamImage{
+    padding: 35px;
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+
+.imageContainer .teamImage img{
+    border: 3px solid #3dcab1;
+    border-radius: 150px;
+
+}
+
+.backgroundTeam{
+    background-image: url(backgroundImage.jpg);
+    background-size: 200%;
+    background-position: center;
+    margin-top: 50px;    
+    opacity: .9;
+    -webkit-background-size: cover;
+}
+
+.imageContainer .teamImage p{
+    display: inline;
+    text-align: center;
 }
