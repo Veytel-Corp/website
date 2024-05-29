@@ -17,7 +17,7 @@
     outline: none;
     border:none;
     text-decoration: none;
-    transition: all .2s linear;
+    /* transition: all .2s linear; */
 }
 
 *::selection{
@@ -192,6 +192,11 @@ body{
 
     background: rgb(255, 255, 255);
     color: var(--veytel-blue);
+}
+
+button:hover, [class*=btn]:hover{
+    cursor: pointer;
+    transition-duration: .2s;
 }
 
 .mission .button-container{
@@ -519,6 +524,10 @@ body{
     font-size: 2rem;
 }
 
+.quote h1.heading span {
+    color: rgb(7, 28, 66);
+}
+
 .quote .row .quoteOne{
     text-align: center;
     flex: 1 1 40rem;
@@ -553,7 +562,7 @@ body{
 
 .quote{
     background-image: linear-gradient(white,white,white, rgb(238, 247, 255));
-    background-image: url(backgroundtech.png);
+    background-image: url(./assets/images/backgroundtech.png);
     background-size: 2000px;
     background-position: center;
 }
@@ -574,13 +583,13 @@ body{
     
 }
 
-.quote .slideshow .slider-btn-container .slider-btn{
+.quote .slideshow .slider-navigation-container .slider-btn{
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 15px;
     width: auto;
-    transition: 0.6s ease;
+    /* transition: 0.6s ease; */
     user-select: none;
     opacity: .9;
     margin: auto;
@@ -589,7 +598,7 @@ body{
     
 
 }
-.quote .slideshow .slider-btn-container .slider-btn.previous{
+.quote .slideshow .slider-navigation-container .slider-btn.previous{
     
     margin-right: 50px;
     left: -2%;
@@ -597,28 +606,28 @@ body{
     -webkit-transform: rotate(135deg);
 }
 
-.quote .slideshow .slider-btn-container{
+.quote .slideshow .slider-navigation-container{
 
     margin: auto;
     text-align: center;
     padding: 30px;
 }
 
-.quote .slideshow .slider-btn-container .slider-btn.previous:hover{
+.quote .slideshow .slider-navigation-container .slider-btn.previous:hover{
     border-width: 0 3px 3px 0;
     color: rgb(255,255,253);
     background-color: var(--veytel-blue);
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
-.quote .slideshow .slider-btn-container .slider-btn.next{
+.quote .slideshow .slider-navigation-container .slider-btn.next{
     margin-left: 50px;
     
     right: -2%;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
-.quote .slideshow .slider-btn-container .slider-btn.next:hover{
+.quote .slideshow .slider-navigation-container .slider-btn.next:hover{
     
     border-width: 0 3px 3px 0;
     color: rgb(255,255,253);
@@ -636,7 +645,7 @@ body{
 
 .missionContainer{
     
-    background-image: url(backgroundImage.jpg);
+    background-image: url(./assets/images/backgroundImage.jpg);
     background-size: 200%;
     background-position: center;
     margin-top: 50px;    
@@ -711,7 +720,7 @@ body{
 }
 
 .backgroundTeam{
-    background-image: url(backgroundImage.jpg);
+    background-image: url(./assets/images/backgroundImage.jpg);
     background-size: 200%;
     background-position: center;
     margin-top: 50px;    

@@ -10,27 +10,11 @@
       href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/load_header.js"></script>
   </head>
   <body>
     <header>
-      <div id="menu-bar" class="fas fa-bars"></div>
-      <a href="#" class="logo"
-        ><span><img src="veytelgreen.png" /></span
-      ></a>
-
-      <nav class="navbar">
-        
-        <a href="index.html#home">Home</a>
-        <a href="index.html#products">Products</a>
-        <a href="index.html#about">Mission</a>
-        <a href="ourteam.html">Team</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="publications.html">Publications</a>
-        
-      </nav>
-
-      <div class="icons"></div>
     </header>
     <div class="login-form-container">
       <i class="fas fa-times" id="form-close"></i>
@@ -54,12 +38,12 @@ to see and measure what is currently hidden in Healthcare Data
       <a href="#products" class="btn">Learn More</a>
       <br>
       <div class="controls">
-        <span class="vid-btn active" data-src="video1.mp4"></span>
-        <span class="vid-btn" data-src="video2.mp4"></span>
-        <span class="vid-btn" data-src="video3.mp4"></span>
+        <span class="vid-btn active" data-src="./assets/videos/video1.mp4"></span>
+        <span class="vid-btn" data-src="./assets/videos/video2.mp4"></span>
+        <span class="vid-btn" data-src="./assets/videos/video3.mp4"></span>
       </div>
       <div class="video-container">
-        <video src="video1.mp4" id="video-slider" loop autoplay muted></video>
+        <video src="./assets/videos/video1.mp4" id="video-slider" loop autoplay muted></video>
       </div>
       <style>
         video {
@@ -90,7 +74,7 @@ to see and measure what is currently hidden in Healthcare Data
        <div class="leftright">
         <div class="productOne">
 
-          <img src="headerphoto2.png">
+          <img src="./assets/images/headerphoto2.png">
           <h1>PulSAR-AI</h1>
           <br />
           <h2>A thermometer for Chest X-ray analysis  <br/> Using AI
@@ -106,7 +90,7 @@ to see and measure what is currently hidden in Healthcare Data
         <br>
         <br>
         <div class="productTwo">
-          <img src="headerphoto1.png">
+          <img src="./assets/images/headerphoto1.png">
           <h1>Derma-AI</h1>
           <br />
           
@@ -126,7 +110,7 @@ to see and measure what is currently hidden in Healthcare Data
 
     
     <!-- Mission Section -->
-    <img class ="missionphoto" src="headerphoto3.png" id="about">
+    <img class ="missionphoto" src="./assets/images/headerphoto3.png" id="about">
     <section class="mission" >
       
       <h1 class="heading">
@@ -161,23 +145,23 @@ to see and measure what is currently hidden in Healthcare Data
       <br>
         <div class="slideshow">
           <div class="slides">
-            <img src="quotes/quote1new.png">
+            <img src="./assets/images/quotes/quote1new.png">
           </div>
           <div class="slides">
-            <img src="quotes/quote2new.png">
+            <img src="./assets/images/quotes/quote2new.png">
           </div>
           <div class="slides">
-            <img src="quotes/quote3new.png">
+            <img src="./assets/images/quotes/quote3new.png">
           </div>
           <div class="slides">
-            <img src="quotes/quote4.png">
+            <img src="./assets/images/quotes/quote4.png">
           </div>
-          <div class="slider-btn-container">
+          <div class="slider-navigation-container">
             <a class="slider-btn previous" onclick="setSlides(-1)"></a>
             <a class="slider-btn next" onclick="setSlides(1)"></a>
           </div>
         </div>
-        <script src="slideshowScript.js"></script>
+        <script src="./js/slideshowScript.js"></script>
         
       <br>
       <br>
@@ -194,6 +178,6 @@ to see and measure what is currently hidden in Healthcare Data
 </section>
       
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -10,15 +10,15 @@
       href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-
-    <link rel="stylesheet" href="contact.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/load_header.js"></script>
   </head>
   <body>
     <header>
-      <div id="menu-bar" class="fas fa-bars"></div>
+      <!-- <div id="menu-bar" class="fas fa-bars"></div>
       <a href="#" class="logo"
-        ><span><img src="veytelgreen.png" /></span
+        ><span><img src="./assets/images/veytelgreen.png" /></span
       ></a>
 
       <nav class="navbar">
@@ -32,7 +32,7 @@
         
       </nav>
 
-      <div class="icons"></div>
+      <div class="icons"></div> -->
     </header>
 
     <!-- contact form -->
@@ -48,16 +48,15 @@
 
         <div class="contact-form">
             <form id="contact-form" method="post" action="contact-form-handler.php">
-            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
-            <br>
-            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-            <br>
-            <textarea name="message" class="form-control" placeholder="Message" row=4 required></textarea>
-            <br>
-            <input type="submit" class="form-control submit" value="Send Message">
-
+              <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+              <br>
+              <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+              <br>
+              <textarea name="message" class="form-control" placeholder="Message" row=4 required></textarea>
+              <br>
+              <input type="submit" class="form-control submit" value="Send Message">
            </form>
           </div>   
-           <script src="script.js"></script>
+           <script src="./js/script.js"></script>
   </body>
 </html>
