@@ -15,8 +15,46 @@
         })
         .then(data => {
             document.querySelector('header').innerHTML = data;
-    })
-    .catch(error => {
-        console.error(`Something went wrong when fetching the header content: `, error);
-    })
+            const navElement = document.querySelector('.main-menu');
+            observer.observe(navElement);
+        })
+        
+        .catch(error => {
+            console.error(`Something went wrong when fetching the header content: `, error);
+        })
 })();
+
+window.addEventListener('scroll', ()=> {
+    if (window.scrollY === 0) {
+        const scrollingNavEl = document.querySelector('.scrolling-nav');
+            const introNavEl = document.querySelector('.intro-nav');
+            const mainMenuEl = document.querySelector('.main-menu');
+            setTimeout(()=>{
+                introNavEl.classList.remove('hidden');
+                mainMenuEl.classList.remove('hidden');
+            }, 10)
+            scrollingNavEl.classList.remove("revealed-scrolling-nav");
+    }
+})
+
+
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            const scrollingNavEl = document.querySelector('.scrolling-nav');
+            const introNavEl = document.querySelector('.intro-nav');
+            const mainMenuEl = document.querySelector('.main-menu');
+            setTimeout(()=>{
+                introNavEl.classList.add('hidden');
+                mainMenuEl.classList.add('hidden');
+            }, 10)
+            scrollingNavEl.classList.add("revealed-scrolling-nav");
+            console.log('off the screen');
+        }
+    });
+};
+const observer = new IntersectionObserver(callback, {
+    root: null,
+    rootMargin: '0px',
+    threshold: .7
+});

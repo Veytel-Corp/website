@@ -1,158 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veytel - Home</title>
 
-    <link
-      rel="stylesheet"
-      href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veytel - Home</title>
 
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/load_header.js"></script>
-  </head>
-  <body>
-    <header>
-    </header>
-    <section class="home" id="home">
-      <div class="video-container">
-        <video src="./assets/videos/video1.mp4" id="video-slider" loop autoplay muted></video>
+  <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <link rel="stylesheet" href="./css/landing.css" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="./js/load_header.js"></script>
+</head>
+
+<body>
+  <header>
+  </header>
+  <div class="home" id="home">
+    <div class="intro-con">
+      <div class="intro-text-con">
+      <h1>Healthcare Innovation <br> Starts Here</h1>
+      <br>
+      <div class="button-con">
+        <button style="font-weight: bold;" class="lm-btn">Learn More</button>
+        <button class="cu-btn">Contact Us</button>
       </div>
-      <style>
-        video {
-            filter: brightness(70%);
-
-
-            
-        }
-    </style>
-
-      
-    </section>
-    
-    
-
-    <!-- product section -->
-    <section class="product" id="products">
-      
-      <h1 class="heading">
-        
-        <span>Our Products</span>
-        <br>
-        <br>
-        <hr>
-        <br>
-      </h1>
-      
-       <div class="leftright">
-        <div class="productOne">
-
-          <img src="./assets/images/headerphoto2.png">
-          <h1>PulSAR-AI</h1>
-          <br />
-          <h2>A thermometer for Chest X-ray analysis  <br/> Using AI
-          <br/>
-          <p>
-            AI technology that provides objective metrics for Chest X-ray assessment for use in ER triage and in-patient treatment planning, resulting in better patient outcomes,  and lower healthcare costs.<br/>
-            
-          </p>
-          
-          <br>
-          
-        </div>
-        <br>
-        <br>
-        <div class="productTwo">
-          <img src="./assets/images/headerphoto1.png">
-          <h1>Derma-AI</h1>
-          <br />
-          
-          <h2>Melanoma Assessment for Early Detection</h2>
-          <br />
-          <p>
-            AI technology that detects change in skin lesions - the most telling sign of melanoma. <br/>
-          </p>
-          <br>
-        </div>
-      </div> 
-      <br>
-      <br>
-      <br>
-    </section>
-
-
-    
-    <!-- Mission Section -->
-    <img class ="missionphoto" src="./assets/images/headerphoto3.png" id="about">
-    <section class="mission" >
-      
-      <h1 class="heading">
-        
-       <span>Our Mission</span>
-      </h1>
-      
-      <hr>
-      <div class="statement">
-        
-        <p>
-          "VeyTel is dedicated to creating AI & computer vision technologies – to
-          improve quality of life..."  
-        </p>
-        
       </div>
-      <br>
-      <div class="button-container"><a href="missionpage.html" class="btn2">Read More</a></div>
-      <br>
-      <br>
+      <img class="swoosh" alt="Powder blue lines swooping, curving, and bending like a crisp ocean wave across the screen." src="./assets/images/swoosh1.png">
+    </div>
+    <video src="./assets/videos/video1.mp4" id="video-slider" loop autoplay muted></video>
+  </div>
+  <div class="placeholder"></div>
+
+  <div class="gradient-overlay"></div>
+  <main>
+    <section id="mission">
+      <div class="mission-statement-con">
+        <h1>Our Mission</h1>
+        <h2>Our mission is to empower clinicians with an e-magnifying glass that not only reveals hidden insights into a patient’s conditions but also measures them with unparalleled accuracy.</h2>
+        <p>VeyTel is at the forefront of leveraging advanced AI technology to revolutionize the healthcare industry. Our technologies are built to provide precise, non-intrusive, real-time analysis that supports early informed decision-making, ultimately leading to better patient outcomes and more efficient healthcare systems.</p>
+        <p>Our commitment excellence and compassion drives us to continually push the boundaries of what is possible, ensuring that we contribute to a healthier, more informed world.</p>
+      </div>
+      <img width="100%" class="dots1" src="./assets/images/dots1.png" alt="Powder blue dots growing from small to large down to the half way mark of the section.">
+    </section>
+    <section class="products" id="products">
+      <div class="products-title-con">
+        <h1>Products</h1>
+        <img width="100%" class="products-header-img" src="./assets/images/productHeader.png" alt="Rolling hills of light to dark blue gradient energy with a high tech circle overlapping in the top right corner."/>
+      </div>
       
+      <div id="product-1-con">
+        <div class="product-text-con">
+          <h2>PulSAR-AI</h2>
+          <h3>A Thermometer for Chest X-ray Analysis</h3>
+          <p>AI technology that provides objective metrics for Chest X-ray assessment for use in ER triage and in-patient treatment planning, resulting in better patient outcomes, and lower healthcare costs.</p>
+        </div>
+      </div>
     </section>
 
 
-    <!-- quote section -->
-    <section class="quote" id="quote">
-      <h1 class="heading">
-        <span>What Professionals are saying about VeyTel </span>
-      </h1>
-      <hr>
-      <br>
-      <br>
-        <div class="slideshow">
-          <div class="slides">
-            <img src="./assets/images/quotes/quote1new.png">
-          </div>
-          <div class="slides">
-            <img src="./assets/images/quotes/quote2new.png">
-          </div>
-          <div class="slides">
-            <img src="./assets/images/quotes/quote3new.png">
-          </div>
-          <div class="slides">
-            <img src="./assets/images/quotes/quote4.png">
-          </div>
-          <div class="slider-navigation-container">
-            <a class="slider-btn previous" onclick="setSlides(-1)"></a>
-            <a class="slider-btn next" onclick="setSlides(1)"></a>
-          </div>
-        </div>
-        <script src="./js/slideshowScript.js"></script>
-        
-      <br>
-      <br>
+  </main>
+</body>
+<!-- <script src="./js/script.js"></script> -->
+<script src="./js/slideshowScript.js"></script>
+<script src="./js/placeholder_resize.js"></script>
+<script src="./js/change_header.js" defer></script>
 
-
-      <!-- Contact Section -->
-<section class="contactUs">
-<h1>Any Questions?</h1>
-<h2>Feel free to reach out.</h2>
-<div class="button-container"><a href="contact.html" class="btn">Contact Us</a></div>
-
-
-
-</section>
-      
-
-    <script src="./js/script.js"></script>
-  </body>
 </html>
