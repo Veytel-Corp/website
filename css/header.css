@@ -48,6 +48,10 @@ nav.intro-nav ul li a {
     margin-left: var(--header-margin-left);
 }
 
+.logo{
+    cursor: pointer;
+}
+
 .main-menu ul {
     display: flex;
     flex-direction: row;
@@ -127,6 +131,7 @@ nav.scrolling-nav .logo {
     margin: 0;
     padding: 0;
     min-width: 15rem;
+    cursor: pointer;
 }
 
 nav.scrolling-nav .menu-button {

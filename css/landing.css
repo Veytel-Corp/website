@@ -15,6 +15,7 @@ main {
     height: fit-content;
     position: fixed;
     top: 0;
+    overflow-x: hidden;
     /* z-index: -1; */
 }
 .placeholder {
@@ -150,8 +151,9 @@ padding-top: 5rem;
 }
 
 .products h1 {
+    font-size: 5rem;
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     color: var(--text-color-light);
 }
 
