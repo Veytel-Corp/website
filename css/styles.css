@@ -17,6 +17,11 @@
     outline: none;
     border:none;
     text-decoration: none;
+
+
+
+    margin: 0;
+    padding: 0;
     /* transition: all .2s linear; */
 }
 
@@ -39,64 +44,6 @@ html{
 
 section{
     padding: 2rem 9%;
-}
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--veytel-blue);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 9%;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-}
-
-header .logo{
-    font-size: 2.7rem;
-    font-weight: bolder;
-    color: #fff;
-    text-transform: uppercase;
-    
-}
-
-header .logo span{
-
-    color:var(--veytel-blue);
-}
-header .navbar{
-    text-align:center;
-    margin: auto;
-    margin-left:0%;
-    align-items: center;
-    white-space: nowrap;
-    margin-left: 3%;
-}
-header .navbar a{
-
-    color: #fff;
-    font-size: 1.9rem;
-    margin: 0 2rem;
-    border-left: 2px solid #3dcab1;
-    margin: auto;
-    padding: 0 18px;
-   margin-left: 0%;
-    
-}
-
-header .logo span img{
-    width: 40%;
-    height: 40%;
-    padding-left: 0px;
-    margin: auto;
-}
-
-header .navbar a:hover{
-
-    color: lightblue;
 }
 
 body{
@@ -125,10 +72,6 @@ body{
 }
 
 @media (max-width:991px){
-
-    header{
-        padding: 2rem;
-    }
     section{
         padding:2rem;
     }
@@ -138,33 +81,6 @@ body{
 
     #menu-bar{
         display: initial;
-    }
-    header .navbar{
-
-        position: absolute;
-        top:100%;
-        right:0;
-        left: 0;
-        background: #ffffff;
-        border-top: .1rem solid rgb(255,255,255,.2);
-        padding: 1rem 2rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        
-    }
-
-    header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
-    }
-
-
-    header .navbar a{
-
-        display: block;
-        border-radius: .5rem;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        background: var(--veytel-blue);
     }
 }
 

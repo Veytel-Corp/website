@@ -1,0 +1,111 @@
+@import url("./variables.css");
+
+header {
+    position: sticky;
+    z-index: 9999;
+    width: 100vw;
+}
+
+nav {
+    background-color: var(--nav-background);
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem var(--header-padding-right);
+    width: 100%;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+nav ul li {
+    color: var(--nav-text-color);
+    font-weight: bold;
+    font-family: var(--reg-font-family);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--nav-text-color);
+}
+
+.main-menu {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: none;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#logo {
+    min-width: 20rem;
+    margin-left: var(--header-margin-left);
+}
+
+.main-menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding-right: var(--header-padding-right)
+}
+
+.main-menu ul li {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 1.8rem;
+    font-family: var(--condensed-font-family);
+    font-weight: bold;
+    height: fit-content;
+    color: var(--nav-text-color);
+}
+
+.main-menu ul li a {
+    color: var(--nav-text-color);
+}
+
+.main-menu ul li.spacer-bar-vert {
+    color: var(--primary-color);
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.menu-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1rem 1.5rem;
+
+    background-color: var(--primary-color);
+    font-family: var(--condensed-font-family);
+}
+
+.burger-menu{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 100%;
+    justify-content: center;
+}
+.burger-menu div {
+    background-color: var(--burger-color-light);
+    width: 2.5rem;
+    height: .25rem;
+    border-radius: 2px;
+}
+
+/* .video-container {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+} */
