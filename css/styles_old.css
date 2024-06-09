@@ -136,7 +136,7 @@ button:hover, [class*=btn]:hover{
     font-weight: bold;
 }
 
-.home{
+#landing{
     min-height: 100vh;
     display:flex;
     align-items: center;
@@ -146,12 +146,12 @@ button:hover, [class*=btn]:hover{
     z-index: 0;
 }
 
-.home .content{
+#landing .content{
     text-align: center;
     
 }
 
-.home .content h3{
+#landing .content h3{
     font-size: 4.5rem;
     color: var(--veytel-blue);
     text-transform: uppercase;
@@ -162,7 +162,7 @@ button:hover, [class*=btn]:hover{
 }
 
 
-.home .content p{
+#landing .content p{
     margin-bottom: -3rem;
     font-size: 3rem;
     color: white;
@@ -173,7 +173,7 @@ button:hover, [class*=btn]:hover{
     
 }
 
-.home .video-container video{
+#landing .video-container video{
     position: absolute;
     top:0;
     left: 0;
@@ -184,7 +184,7 @@ button:hover, [class*=btn]:hover{
 
 }
 
-.home .controls{
+#landing .controls{
     padding: 1rem;
     border-radius: 5rem;
     background: rgba(0,0,0,.7);
@@ -192,7 +192,7 @@ button:hover, [class*=btn]:hover{
     top: 10rem;
 }
 
-.home .controls .vid-btn{
+#landing .controls .vid-btn{
 
     height: 2rem;
     width: 2rem;
@@ -203,7 +203,7 @@ button:hover, [class*=btn]:hover{
     margin: 0 .5rem;
 }
 
-.home .controls .vid-btn.active{
+#landing .controls .vid-btn.active{
     background: #3dcab1;
 
 }

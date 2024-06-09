@@ -6,18 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veytel - Home</title>
 
-  <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/landing.css" />
-
+  <!-- <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+  
   <link rel="stylesheet" href="./css/styles.css" />
+
+  <link rel="stylesheet" href="./css/index/landing.css" />
+  <link rel="stylesheet" href="./css/index/products.css" />
+  <link rel="stylesheet" href="./css/index/mission.css" />
+  <link rel="stylesheet" href="./css/index/testimonials.css" />
+
+  <link rel="stylesheet" href="./css/footer.css" />
+
   <script src="./js/load_header.js"></script>
 </head>
 
 <body>
   <header>
   </header>
-  <div class="home" id="home">
+  <section class="landing" id="landing">
     <div class="intro-con">
       <div class="intro-text-con">
       <h1>Healthcare Innovation <br> Starts Here</h1>
@@ -30,9 +38,8 @@
       <img class="swoosh" alt="Powder blue lines swooping, curving, and bending like a crisp ocean wave across the screen." src="./assets/images/swoosh1.png">
     </div>
     <video src="./assets/videos/video1.mp4" id="video-slider" loop autoplay muted></video>
-  </div>
+  </section>
   <div class="placeholder"></div>
-
   <div class="gradient-overlay"></div>
   <main>
     <section id="mission">
@@ -47,23 +54,73 @@
     <section class="products" id="products">
       <div class="products-title-con">
         <h1>Products</h1>
-        <img width="100%" class="products-header-img" src="./assets/images/productHeader.png" alt="Rolling hills of light to dark blue gradient energy with a high tech circle overlapping in the top right corner."/>
+        <!-- <img width="100%" class="products-header-img" src="./assets/images/products/products_header.png" alt="Rolling hills of light to dark blue gradient energy with a high tech circle overlapping in the top right corner."/> -->
       </div>
       
       <div id="product-1-con">
-        <div class="product-text-con">
-          <h2>PulSAR-AI</h2>
-          <h3>A Thermometer for Chest X-ray Analysis</h3>
-          <p>AI technology that provides objective metrics for Chest X-ray assessment for use in ER triage and in-patient treatment planning, resulting in better patient outcomes, and lower healthcare costs.</p>
+        <div class="product-content-con">
+          <div class="product-text-con">
+            <h2>PulSAR-AI</h2>
+            <h3>A Thermometer for Chest X-ray Analysis</h3>
+            <p>AI technology that provides objective metrics for Chest X-ray assessment for use in ER triage and in-patient treatment planning, resulting in better patient outcomes, and lower healthcare costs.</p>
+          </div>
+          <img class="product-img" src="./assets/images/products/products1.png"/>
         </div>
+        <!-- <img class="dot-waves" src="./assets/images/products/bottom_wave.png"/> -->
+      </div>
+      <div id="product-2-con">
+        <div class="product-content-con flex-direction-row-reverse">
+          <div class="product-text-con">
+            <h2>Derma-AI</h2>
+            <h3>Melanoma Assessment for Early Detection</h3>
+            <p>AI technology that detects change in skin lesions - the most telling sign of melanoma. </p>
+          </div>
+          <img class="product-img" src="./assets/images/products/products2.png"/>
+        </div>
+        <!-- <img class="dot-waves" src="./assets/images/products/bottom_wave.png"/> -->
+      </div>
+      <div id="product-3-con">
+        <div class="product-content-con">
+          <div class="product-text-con">
+            <h2>PulSAR-AI</h2>
+            <h3>A Thermometer for Chest X-ray Analysis</h3>
+            <p>AI technology that provides objective metrics for Chest X-ray assessment for use in ER triage and in-patient treatment planning, resulting in better patient outcomes, and lower healthcare costs.</p>
+          </div>
+          <img class="product-img" src="./assets/images/products/products3.png"/>
+        </div>
+        <!-- <img class="corner-dots" src="./assets/images/products/corner_dots.png"/> -->
       </div>
     </section>
-
-
+    <section id="testimonials">
+      <h1>What Professionals are Saying about VeyTel</h1>
+      <div class="testimoniasl-con">
+        <img class="circle-prev-arrow circe-btn" width="75" src="./assets/svg/circle_next_arrow.svg"/>
+        <div class="quote-con">
+          <p class="quote">“Such technology would have a <strong>tremendous impact</strong> on clinical care and future research of acute respiratory illness. <strong>It would support pharmaceutical companies</strong> and clinical investigators in clinical trials in objective and <strong>rapid</strong> but <strong>accurate decision making</strong> around trial enrollment and therapy decisions.”</p>
+          <p class="quoted-by">- Top German Pharmaceutical Company</p>
+        </div>
+        <img class="circle-next-arrow circe-btn" width="75" src="./assets/svg/circle_next_arrow.svg"/>
+      </div>
+      <img class="hexagons" src="./assets/images/hexagons.png">
+    </section>
   </main>
+  <footer>
+    <div class="tilted-rec-1"></div>
+    <div class="footer-content-con">
+      <div class="footer-info">
+        <p>info@veytel.com</p>
+        <p>address 01, CA 94321</p>
+        <p>(707) 826-3011</p>
+        <p class="copyright">© 2024 VeyTel</p>
+      </div>
+      <div class="get-connected-con">
+        <h2>Get Connected</h2>
+        <div class="socials-con"></div>
+      </div>
+    </div>
+    <div class="tilted-rec-2"></div>
+  </footer>
 </body>
-<!-- <script src="./js/script.js"></script> -->
-<!-- <script src="./js/slideshowScript.js"></script> -->
 <script src="./js/placeholder_resize.js"></script>
 <script src="./js/change_header.js" defer></script>
 

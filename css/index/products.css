@@ -1,0 +1,94 @@
+@import url("../variables.css");
+
+.products {
+    background-color: var(--light-background-color);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.products .products-header-img{
+    width: 86%;
+}
+
+.products .products-title-con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+    background-color: var(--lightest-color);
+}
+
+.products h1 {
+    z-index: 1;
+    color: var(--primary-color);
+}
+
+.products h1, .products h2, .products h3, .products p {
+    color: var(--primary-color)
+}
+
+.product-text-con {
+    z-index: 1;
+}
+
+.product-text-con h2, .product-content-con h3 {
+    font-family: var(--condensed-font-family);
+}
+
+.product-text-con h2 {
+    font-size: 3rem;
+}
+.product-text-con h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-content-con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* position: absolute; */
+    align-items: center;
+    padding: 3.5% 7%;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.product-text-con {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align:center;
+}
+
+.product-img {
+    z-index: 1;
+    height: auto;
+    width: 45%;
+}
+
+#product-1-con, #product-2-con, #product-3-con {
+    position: relative;
+}
+
+#product-1-con::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, var(--lightest-color), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#product-2-con {
+    background-color: var(--lightest-color);
+}

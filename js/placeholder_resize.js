@@ -1,5 +1,5 @@
 function setPlaceholderHeight() {
-    const homeEl = document.querySelector('#home');
+    const homeEl = document.querySelector('#landing');
     const navEl = document.querySelector('.intro-nav');
     const placeholderEl = document.querySelector('.placeholder');
     

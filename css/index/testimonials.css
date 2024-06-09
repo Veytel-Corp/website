@@ -1,0 +1,62 @@
+@import url("../variables.css");
+
+#testimonials {
+    padding: 15% 7%;
+    overflow-y: hidden;
+    position: relative;
+
+}
+
+#testimonials::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(to bottom, transparent, var(--lightest-color));
+    pointer-events: none;
+    z-index: 999;
+}
+
+#testimonials h1 {
+    text-align: center;
+    font-size: 3rem;
+    z-index: 10;
+    position: relative;
+}
+
+.testimoniasl-con {
+    display: flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.quote-con {
+    position: relative;
+    padding: 0 7%;
+    z-index: 10;
+}
+
+.quote-con p {
+    font-family: var(--slab-font-family);
+    margin-top: 3rem;
+}
+
+.testimoniasl-con img.circe-btn {
+    height: fit-content
+}
+
+.testimoniasl-con .circe-btn:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+img.hexagons {
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
