@@ -61,7 +61,7 @@ function isWidthLessThan(width) {
 }
 function toLandingPage() {
     const currentPath = window.location.pathname;
-    if (currentPath === '/index.html') {
+    if (currentPath.includes('/index.html')) {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
