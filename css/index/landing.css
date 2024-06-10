@@ -59,6 +59,7 @@ main {
 }
 
 .intro-text-con {
+    width:fit-content;
     animation: fadeInFromBottom 1.3s ease-out forwards;
 }
 
@@ -111,6 +112,12 @@ main {
     }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 912px) {
+    .intro-con h1 {
+        margin-top: 5rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .gradient-overlay {
         display: none;
@@ -118,14 +125,14 @@ main {
     #landing {
         margin-top: 7rem;
     }
+    .intro-text-con h1 {
+        font-size: 3rem;
+    }
     .swoosh {
         top: 6.7rem;
     }
     .placeholder {
         margin-top: 6.5rem;
-    }
-    .intro-con h1 {
-        font-size: 1.5rem;
     }
     .intro-con button {
         font-size: 1rem;
@@ -135,5 +142,11 @@ main {
     }
     .cu-btn {
         padding: .3rem .4rem;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .intro-con h1 {
+        font-size: 1.5rem;
     }
 }
