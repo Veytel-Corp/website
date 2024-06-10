@@ -30,13 +30,13 @@
             });
 
             // Menu buttons event listeners
-            const menuButtons = headerEl.querySelectorAll('.menu-button');
+            const menuButtons = headerEl.querySelectorAll('.menu-button, .x');
             menuButtons.forEach((button) => {
                 button.addEventListener('click', toggleMenuModal);
             })
 
             // Menu a tag event listeners
-            const menuATags = headerEl.querySelectorAll('ul.modal-nav-list li a');
+            const menuATags = headerEl.querySelectorAll('ul.modal-nav-list li a, .mobile-menu-modal ul li a');
             menuATags.forEach((a) => {
                 a.addEventListener('click', toggleMenuModal);
             })
@@ -71,13 +71,16 @@ function toLandingPage() {
 }
 function toggleMenuModal() {
     const menuModalEl = document.querySelector('.menu-modal');
+    const mobileMenuModalEl = document.querySelector('.mobile-menu-modal');
     if (menuModalEl.classList.contains('hidden')) {
         menuModalEl.classList.remove('hidden');
+        mobileMenuModalEl.classList.remove('hidden');
         document.body.style.overflow = 'hidden !important';
         document.body.style.position = 'fixed';
     }
     else {
         menuModalEl.classList.add('hidden');
+        mobileMenuModalEl.classList.add('hidden');
         document.body.style.overflow = 'visible';
         document.body.style.position = 'initial';
     }

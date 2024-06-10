@@ -12,7 +12,7 @@ const testimonials = [
         quotedBy: '- Major Midwestern Medical Center'
     },
     {
-        quote: '"DermaViz... would <strong>promote early detection</strong>... and have the greatest chance to <strong>reduce the burden of later disease</strong> - both in terms of morbidity and mortality."',
+        quote: '"Derma-AI... would <strong>promote early detection</strong>... and have the greatest chance to <strong>reduce the burden of later disease</strong> - both in terms of morbidity and mortality."',
         quotedBy: '- Largest Pitsburgh Cancer Center'
     },
 
