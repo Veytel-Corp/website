@@ -100,6 +100,20 @@ a {
     width: fit-content;
 }
 
+@media only screen and (max-width: 1200px) {
+    .footer-content-con h2 {
+        font-size: 4vw;
+        font-family: var(--slab-font-family);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-content-con h2 {
+        font-size: 4.2vw;
+        font-family: var(--slab-font-family);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     footer {
         height: 50vw;
