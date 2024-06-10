@@ -4,6 +4,9 @@ function setPlaceholderHeight() {
     const placeholderEl = document.querySelector('.placeholder');
     
     const homeHeight = homeEl.offsetHeight;
+
+    if(!navEl) return;
+    
     const navHeight = navEl.offsetHeight;
 
     placeholderEl.style.height = homeHeight - navHeight + 'px';

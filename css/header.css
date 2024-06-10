@@ -41,11 +41,15 @@ nav.intro-nav ul li a {
     flex-wrap: none;
     text-align: center;
     justify-content: space-between;
+    padding: 1rem var(--header-padding-right)
 }
 
 .main-menu .logo {
-    min-width: 20rem;
-    margin-left: var(--header-margin-left);
+    height: 5vw;
+    min-height: 4rem;
+    width: auto;
+    /* min-width: 20rem; */
+    /* margin-left: var(--header-margin-left); */
 }
 
 .logo{
@@ -56,9 +60,9 @@ nav.intro-nav ul li a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    /* gap: 2rem; */
     list-style: none;
-    padding-right: var(--header-padding-right)
+    /* padding-right: var(--header-padding-right) */
 }
 
 .main-menu ul li {
@@ -74,11 +78,34 @@ nav.intro-nav ul li a {
 .main-menu ul li a {
     color: var(--nav-text-color);
     font-family: var(--condensed-font-family);
+    padding: 0 2rem;
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+.main-menu ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.main-menu ul li a:hover::before {
+    left: 0;
 }
 
 .spacer-bar-vert {
     background-color: var(--primary-color);
-    height: 25%;
+    height: 2.167rem;
     width: .33rem;
 }
 
@@ -87,6 +114,7 @@ nav.intro-nav ul li a {
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
+    margin-left: 2rem;
 
     height: 20%;
     padding: 5% 1rem;
@@ -95,6 +123,10 @@ nav.intro-nav ul li a {
     font-family: var(--condensed-font-family);
 
     cursor: pointer;
+}
+
+.menu-button:hover {
+    filter: brightness(120%);
 }
 
 .burger-menu{
@@ -116,7 +148,7 @@ nav.intro-nav ul li a {
 
 nav.scrolling-nav {
     width: 100vw;
-    padding: 0 7%;
+    padding: 0 var(--main-left-right-padding);
     display: flex;
     height: 6rem;
     justify-content: space-between;
@@ -154,4 +186,80 @@ nav.scrolling-nav .menu-button {
     top: 0 !important;
 }
 
+@media only screen and (max-width: 1125px) {
+    .main-menu {
+        padding-top: 1rem;
+    }
+    .main-menu .logo {
+        width: fit-content;
+        height: 4rem;
+    }
+    .main-menu ul li {
+        font-size: 1.2rem;
+    }
+}
 
+@media only screen and (max-width: 960px) {
+    .main-menu {
+        padding-top: 1rem;
+    }
+    .main-menu .logo {
+        width: fit-content;
+        height: 3.5rem;
+    }
+    .main-menu ul li {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    header * {
+        transition-duration: 0s !important;
+    }
+    nav.intro-nav {
+        display: none;
+    }
+    .main-menu {
+        display: none;
+    }
+
+    header .scrolling-nav {
+        top: 0;
+        height: 7.5rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 7%;
+    }
+
+    header .scrolling-nav .logo {
+        height: 3.5rem;
+        width: auto;
+        min-width: 0;
+    }
+
+    header .scrolling-nav .menu-button {
+        height: 3.5rem;
+        padding: 0 .5rem;
+    }
+
+    header .burger-menu div {
+        width: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 912px) {
+    .intro-con h1 {
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    header .scrolling-nav {
+        padding: 1rem 7%;
+    }
+
+    header .scrolling-nav .logo {
+        height: 2.5rem;
+    }
+}

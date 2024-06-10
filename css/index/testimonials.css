@@ -1,7 +1,7 @@
 @import url("../variables.css");
 
 #testimonials {
-    padding: 15% 7%;
+    padding:7%;
     overflow-y: hidden;
     position: relative;
 
@@ -16,7 +16,7 @@
     height: 3rem;
     background: linear-gradient(to bottom, transparent, var(--lightest-color));
     pointer-events: none;
-    z-index: 999;
+    z-index: 2;
 }
 
 #testimonials h1 {
@@ -26,7 +26,7 @@
     position: relative;
 }
 
-.testimoniasl-con {
+.testimonials-con {
     display: flex;
     position:relative;
     justify-content: space-between;
@@ -35,9 +35,13 @@
 }
 
 .quote-con {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
     position: relative;
-    padding: 0 7%;
+    padding: 0 var(--main-left-right-padding);
     z-index: 10;
+    min-height: 25rem;
 }
 
 .quote-con p {
@@ -45,11 +49,11 @@
     margin-top: 3rem;
 }
 
-.testimoniasl-con img.circe-btn {
-    height: fit-content
+.testimonials-con img.circle-btn {
+    height: fit-content;
 }
 
-.testimoniasl-con .circe-btn:hover {
+.testimonials-con .circle-btn:hover {
     cursor: pointer;
     opacity: .6;
 }
@@ -59,4 +63,44 @@ img.hexagons {
     position:absolute;
     top: 0;
     left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    #testimonials h1 {
+        font-size: 2rem;
+    }
+    .quote-con {
+        padding: 0;
+        min-height: 13rem;
+    }
+    .circle-btn {
+        width: 3rem !important;
+        margin-top: 1rem;
+    }
+    .quote-con p{
+        margin: .5rem 0 !important;
+    }
+    .testimonials-con {
+        display: grid;
+        grid-template-areas:
+          "quote-con quote-con"
+          "prev-arrow next-arrow";
+        justify-items: center;
+      }
+      
+      .quote-con {
+        grid-area: quote-con;
+      }
+      
+      .circle-prev-arrow {
+        grid-area: prev-arrow;
+        margin-left: 3rem;
+      }
+      
+      .circle-next-arrow {
+        grid-area: next-arrow;
+        margin-right: 3rem;
+      }
+      
 }

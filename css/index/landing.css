@@ -5,7 +5,7 @@ main {
     background-color: var(--lightest-color);
 }
 .gradient-overlay {
-    height: 25vw; /* Adjust the height as needed */
+    height: 20vw; /* Adjust the height as needed */
     background: linear-gradient(to top, var(--lightest-color), transparent);
     pointer-events: none; /* Ensure the gradient doesn't block interactions */
     position:relative;
@@ -64,7 +64,7 @@ main {
 
 .intro-con h1 {
     font-family: var(--condensed-font-family);
-    color: var(--text-color-light);
+    color: var(--light-text-color);
     font-size: 4rem;
     font-weight: bold;
 }
@@ -84,7 +84,7 @@ main {
 
 .lm-btn {
     background-color: var(--nav-background);
-    color: var(--text-color-light);
+    color: var(--light-text-color);
     padding: 1rem 2.5rem;
     margin-right: 1rem;
 }
@@ -103,4 +103,37 @@ main {
     left: 0;
     width: 100%;
     z-index: -1;
+}
+
+@media only screen and (max-width: 1280px) {
+    .gradient-overlay {
+        height: 5vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gradient-overlay {
+        display: none;
+    }
+    #landing {
+        margin-top: 7rem;
+    }
+    .swoosh {
+        top: 6.7rem;
+    }
+    .placeholder {
+        margin-top: 6.5rem;
+    }
+    .intro-con h1 {
+        font-size: 1.5rem;
+    }
+    .intro-con button {
+        font-size: 1rem;
+    }
+    .lm-btn {
+        padding: .3rem .5rem
+    }
+    .cu-btn {
+        padding: .3rem .4rem;
+    }
 }
