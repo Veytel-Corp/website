@@ -151,7 +151,7 @@ a {
 
     footer .footer-info p{
         font-family: var(--condensed-font-family);
-        font-size: .8rem;
+        font-size: 1rem;
         line-height: initial;
     }
 
@@ -184,7 +184,7 @@ a {
     }
 
     .socials-con img {
-        width: 1.5rem;
+        width: 2.5rem;
     }
 }
 

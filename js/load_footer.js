@@ -25,7 +25,6 @@
 })();
 
 function scrollToTop() {
-    console.log('clicked')
     window.scrollTo({
         top: 0,
         behavior: 'smooth'

@@ -56,7 +56,6 @@ function isAtBottom() {
     return window.innerHeight + window.scrollY >= document.body.offsetHeight - 1;
 }
 function isWidthLessThan(width) {
-    console.log(window.innerWidth)
     if(window.innerWidth <= width) return true;
     return false;
 }
