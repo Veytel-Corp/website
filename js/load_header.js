@@ -75,17 +75,19 @@ function toggleMenuModal() {
     const menuModalEl = document.querySelector('.menu-modal');
     const mobileMenuModalEl = document.querySelector('.mobile-menu-modal');
     const mainEl = document.querySelector('main');
+    const footerEl = document.querySelector('footer');
     if (menuModalEl.classList.contains('hidden')) {
         menuModalEl.classList.remove('hidden');
         mobileMenuModalEl.classList.remove('hidden');
-        // mainEl.classList.add('hidden');
-        // document.body.style.overflow = 'hidden !important';
-        // document.body.style.position = 'fixed';
+        footerEl.classList.add('hidden');
+        mainEl.classList.add('hidden');
     }
     else {
         menuModalEl.classList.add('hidden');
         mobileMenuModalEl.classList.add('hidden');
-        // mainEl.classList.remove('hidden');
+        footerEl.classList.remove('hidden');
+        mainEl.classList.remove('hidden');
+        
         document.body.style.position = 'fixed';
         // document.body.style.overflow = 'visible';
         setTimeout(()=> {
@@ -166,4 +168,4 @@ const observer = new IntersectionObserver(callback, {
     threshold: .7
 });
 
-console.log('1.0')
+console.log('1.1')
