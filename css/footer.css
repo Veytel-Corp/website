@@ -15,9 +15,8 @@ footer {
 .footer-content-con {
     z-index: 3;
     width: 100%;
-    height: fit-content;
+    height: 22rem;
     display:flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 14%;
@@ -131,6 +130,9 @@ a {
     
     footer .tilted-rec-1 {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-content-con {
     }
 
     .footer-content-con div:not(.socials-con) {
