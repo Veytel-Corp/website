@@ -1,4 +1,4 @@
-@import url("./variables.css");
+@import url("../variables.css");
 
 header {
     position: sticky;
@@ -78,9 +78,10 @@ nav.intro-nav ul li a {
     color: var(--nav-text-color);
     font-family: var(--condensed-font-family);
     padding: 0 2rem;
-
+    height: 2.3rem;
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     overflow: hidden;
 
     text-decoration: none;
@@ -104,7 +105,7 @@ nav.intro-nav ul li a {
 
 .spacer-bar-vert {
     background-color: var(--primary-color);
-    height: 2.167rem;
+    height: 2.3rem;
     width: .33rem;
 }
 
@@ -241,7 +242,6 @@ nav.scrolling-nav .menu-button {
     }
 
     header .scrolling-nav .menu-button {
-        height: 3.5rem;
         padding: 0 .5rem;
     }
 

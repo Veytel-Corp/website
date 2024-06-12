@@ -8,6 +8,7 @@
 
 html, body {
     overflow-x: hidden;
+    touch-action: manipulation;
 }
 
 li {
@@ -43,6 +44,16 @@ p {
     font-size: 1.8rem;
     font-family: var(--reg-font-family);
     color: var(--primary-color);
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+video::-webkit-media-controls {
+    display: none;
 }
 
 .flex-direction-row-reverse {

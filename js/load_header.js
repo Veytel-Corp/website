@@ -1,10 +1,11 @@
-(function loadHeaderStyles(filePath = './css/header.css') {
+(function loadHeaderStyles(filePath = './css/header/header.css') {
     const headEl = document.querySelector('head');
     let headElInnerHTML = headEl.innerHTML;
     headElInnerHTML += `
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="${filePath}" /> 
-    <link rel="stylesheet" href="./css/menu_modal.css" />
+    <link rel="stylesheet" href="./css/header/menu_modal.css" />
+    <link rel="stylesheet" href="./css/header/mobile_menu_modal.css" />
     `;
     headEl.innerHTML = headElInnerHTML;
 })();
@@ -30,7 +31,7 @@
             });
 
             // Menu buttons event listeners
-            const menuButtons = headerEl.querySelectorAll('.menu-button, .x');
+            const menuButtons = headerEl.querySelectorAll('.toggle-menu-modal');
             menuButtons.forEach((button) => {
                 button.addEventListener('click', toggleMenuModal);
             })
@@ -41,7 +42,7 @@
                 a.addEventListener('click', toggleMenuModal);
             })
 
-            const closeMenuModalEl = headerEl.querySelector('.close-modal-button');
+            const closeMenuModalEl = headerEl.querySelector('.close-menu-modal-button');
             closeMenuModalEl.addEventListener('click', toggleMenuModal)
 
 
@@ -74,13 +75,13 @@ function toggleMenuModal() {
     if (menuModalEl.classList.contains('hidden')) {
         menuModalEl.classList.remove('hidden');
         mobileMenuModalEl.classList.remove('hidden');
-        document.body.style.overflow = 'hidden !important';
+        // document.body.style.overflow = 'hidden !important';
         document.body.style.position = 'fixed';
     }
     else {
         menuModalEl.classList.add('hidden');
         mobileMenuModalEl.classList.add('hidden');
-        document.body.style.overflow = 'visible';
+        // document.body.style.overflow = 'visible';
         document.body.style.position = 'initial';
     }
     

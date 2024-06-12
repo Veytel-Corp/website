@@ -2,9 +2,16 @@
 
 #products {
     background-color: var(--light-background-color);
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     position: relative;
+    height: fit-content;
+    width: 100%;
+}
+
+.product-con {
+    width: 100%;
+    height: fit-content;
 }
 
 #products .products-title-con {

@@ -16,18 +16,16 @@
 }
 
 .under-construction-modal div {
-    /* width: 80%; */
     height: 80%;
-    position: relative;
+    max-height: 80%;
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center
 }
 
 .under-construction-modal div img {
-    height: 100%;
-    position: absolute;
-    bottom: 0;
+    width: 80%;
     z-index: 1;
 }
 
