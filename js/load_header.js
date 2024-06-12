@@ -21,7 +21,7 @@
         .then(data => {
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
-            setPlaceholderHeight();
+            document.querySelector('video').addEventListener('loadeddata', setPlaceholderHeight);
             const mainMenuEl = document.querySelector('.main-menu');
             observer.observe(mainMenuEl);
 
