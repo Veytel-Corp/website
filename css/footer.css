@@ -2,7 +2,8 @@
 
 footer {
     width: 100vw;
-    background-color: var(--lightest-color);
+    /* background-color: var(--lightest-color); */
+    background-color: var(--light-background-color);
     position:relative;
     display: flex;
     align-items: center;

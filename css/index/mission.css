@@ -3,7 +3,32 @@
 #mission {
     background-color: var(--lightest-color);
     position: relative;
+    padding-top: 3.5%;
     
+}
+
+/* #mission::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12rem;
+    background: linear-gradient(to bottom, var(--light-background-color), transparent);
+    pointer-events: none;
+    z-index: 1;
+} */
+
+#mission::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12rem;
+    background: linear-gradient(to top, var(--light-background-color), transparent);
+    pointer-events: none;
+    z-index: 1;
 }
 
 #mission img {
