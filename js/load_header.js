@@ -74,17 +74,24 @@ function toLandingPage() {
 function toggleMenuModal() {
     const menuModalEl = document.querySelector('.menu-modal');
     const mobileMenuModalEl = document.querySelector('.mobile-menu-modal');
+    const mainEl = document.querySelector('main');
     if (menuModalEl.classList.contains('hidden')) {
         menuModalEl.classList.remove('hidden');
         mobileMenuModalEl.classList.remove('hidden');
+        // mainEl.classList.add('hidden');
         // document.body.style.overflow = 'hidden !important';
-        document.body.style.position = 'fixed';
+        // document.body.style.position = 'fixed';
     }
     else {
         menuModalEl.classList.add('hidden');
         mobileMenuModalEl.classList.add('hidden');
+        // mainEl.classList.remove('hidden');
+        document.body.style.position = 'fixed';
         // document.body.style.overflow = 'visible';
-        document.body.style.position = 'initial';
+        setTimeout(()=> {
+            document.body.style.position = 'initial';
+        }, 0)
+        
     }
     
 }
