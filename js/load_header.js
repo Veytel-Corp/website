@@ -165,3 +165,5 @@ const observer = new IntersectionObserver(callback, {
     rootMargin: '0px',
     threshold: .7
 });
+
+console.log('1.0')
