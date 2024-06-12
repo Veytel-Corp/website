@@ -137,24 +137,18 @@ a {
         top: 50%;
     }
 
-    /* .footer-content-con div:not(.socials-con) {
+    .footer-content-con div:not(.socials-con) {
         flex-direction: row;
         flex-wrap: wrap;
         padding-top: 0;
         height: fit-content;
-    } */
+    }
 
     footer .footer-info {
         display: flex;
         justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        padding-top: 0;
-
-        height: fit-content;
         width: 90%;
-        
+        flex-wrap: wrap;
         gap: .5rem;
         scale: 1.2;
     }
