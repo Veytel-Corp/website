@@ -21,9 +21,19 @@
         .then(data => {
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
-            document.querySelector('video').addEventListener('loadeddata', setPlaceholderHeight);
-            document.querySelector('video').addEventListener('load', setPlaceholderHeight);
             const mainMenuEl = document.querySelector('.main-menu');
+            
+            const videoEl = document.querySelector('video');
+            const placeholderEl = document.querySelector('.placeholder');
+            
+            const videElObserver = new MutationObserver(() => {
+                placeholderEl.style.height = `${videoEl.offsetHeight}px`;
+            });
+            const config = { attributes: true, childList: true, subtree: true };
+            videElObserver.observe(videoEl, config);
+            placeholderEl.style.height = `${videoEl.offsetHeight}px`;
+            
+
             observer.observe(mainMenuEl);
 
             // Logo event listeners
@@ -141,10 +151,6 @@ function setPlaceholderHeight() {
     placeholderEl.style.height = homeHeight - navHeight + 'px';
 }
 
-// setTimeout(setPlaceholderHeight(), 100);
-// setPlaceholderHeight();
-// console.log('help')
-// window.addEventListener('load', setPlaceholderHeight);
 window.addEventListener('resize', setPlaceholderHeight);
 
 const callback = (entries, observer) => {
