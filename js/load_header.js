@@ -26,15 +26,19 @@
             const videoEl = document.querySelector('video');
             const placeholderEl = document.querySelector('.placeholder');
 
-            const navEl = document.querySelector('.intro-nav');
-            const navHeight = navEl.offsetHeight;
+            videoEl.addEventListener('loadeddata', ()=>{
+                // console.log('loaded')
+                setPlaceholderHeight()});
+
+            // const navEl = document.querySelector('.scrolling-nav');
+            // const navHeight = navEl.offsetHeight;
             
-            const videElObserver = new MutationObserver(() => {
-                placeholderEl.style.height = `${videoEl.offsetHeight + navHeight}px`;
-            });
-            const config = { attributes: true, childList: true, subtree: true };
-            videElObserver.observe(videoEl, config);
-            placeholderEl.style.height = `${videoEl.offsetHeight}px`;
+            // const videElObserver = new MutationObserver(() => {
+            //     placeholderEl.style.height = `${videoEl.offsetHeight + navHeight}px`;
+            // });
+            // const config = { attributes: true, childList: true, subtree: true };
+            // videElObserver.observe(videoEl, config);
+            // placeholderEl.style.height = `${videoEl.offsetHeight + navHeight}px`;
             
 
             observer.observe(mainMenuEl);
@@ -133,9 +137,6 @@ async function toggleScrollingNav() {
         scrollingNavEl.classList.remove('hidden')
     }
 }
-window.addEventListener('scroll', toggleScrollingNav);
-window.addEventListener('resize', toggleScrollingNav);
-
 function setPlaceholderHeight() {
     
     const homeEl = document.querySelector('#landing');
@@ -153,6 +154,8 @@ function setPlaceholderHeight() {
 
     placeholderEl.style.height = homeHeight - navHeight + 'px';
 }
+window.addEventListener('scroll', toggleScrollingNav);
+window.addEventListener('resize', toggleScrollingNav);
 
 window.addEventListener('resize', setPlaceholderHeight);
 
