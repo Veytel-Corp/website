@@ -225,7 +225,7 @@ nav.scrolling-nav .menu-button {
 
     header .scrolling-nav {
         top: 0;
-        height: 7.5rem;
+        height: var(--mobile-nav-height);
         align-items: center;
         justify-content: space-between;
         padding: 0 7%;
