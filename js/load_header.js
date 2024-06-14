@@ -25,9 +25,12 @@
             
             const videoEl = document.querySelector('video');
             const placeholderEl = document.querySelector('.placeholder');
+
+            const navEl = document.querySelector('.intro-nav');
+            const navHeight = navEl.offsetHeight;
             
             const videElObserver = new MutationObserver(() => {
-                placeholderEl.style.height = `${videoEl.offsetHeight}px`;
+                placeholderEl.style.height = `${videoEl.offsetHeight + navHeight}px`;
             });
             const config = { attributes: true, childList: true, subtree: true };
             videElObserver.observe(videoEl, config);
