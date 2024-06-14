@@ -22,24 +22,6 @@
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
             const mainMenuEl = document.querySelector('.main-menu');
-            
-            const videoEl = document.querySelector('video');
-            const placeholderEl = document.querySelector('.placeholder');
-
-            videoEl.addEventListener('loadeddata', ()=>{
-                // console.log('loaded')
-                setPlaceholderHeight()});
-
-            // const navEl = document.querySelector('.scrolling-nav');
-            // const navHeight = navEl.offsetHeight;
-            
-            // const videElObserver = new MutationObserver(() => {
-            //     placeholderEl.style.height = `${videoEl.offsetHeight + navHeight}px`;
-            // });
-            // const config = { attributes: true, childList: true, subtree: true };
-            // videElObserver.observe(videoEl, config);
-            // placeholderEl.style.height = `${videoEl.offsetHeight + navHeight}px`;
-            
 
             observer.observe(mainMenuEl);
 
@@ -158,6 +140,7 @@ window.addEventListener('scroll', toggleScrollingNav);
 window.addEventListener('resize', toggleScrollingNav);
 
 window.addEventListener('resize', setPlaceholderHeight);
+window.addEventListener('load', setPlaceholderHeight);
 
 const callback = (entries, observer) => {
     entries.forEach(entry => {
