@@ -9,7 +9,7 @@ header {
 
 nav.intro-nav {
     /* background-color: var(--nav-background); */
-    background-color: yellow;
+    background-color: var(--nav-background);
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem var(--header-padding-right);
