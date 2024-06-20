@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veytel - Home</title>
+
+    <link
+      rel="stylesheet"
+      href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+      <a href="#" class="logo"
+        ><span><img src="veytelgreen.png" /></span
+      ></a>
+
+      <nav class="navbar">
+        
+        <a href="index.html#home">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#about">Mission</a>
+        <a href="ourteam.html">Team</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="publications.html">Publications</a>
+        
+      </nav>
+
+      <div class="icons"></div>
+    </header>
+    <div class="login-form-container">
+      <i class="fas fa-times" id="form-close"></i>
+    </div>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Healthcare <span>Innovation</span> Starts Here</h3>
+        <Br>
+          <Br>
+            <Br>
+        <p>
+          Our mission is to create technology to give clinicians an e-Magnifying Glass<br>
+to see and measure what is currently hidden in Healthcare Data
+
+        </p>
+        
+      </div>
+
+      <a href="#products" class="btn">Learn More</a>
+      <br>
+      <div class="controls">
+        <span class="vid-btn active" data-src="video1.mp4"></span>
+        <span class="vid-btn" data-src="video2.mp4"></span>
+        <span class="vid-btn" data-src="video3.mp4"></span>
+      </div>
+      <div class="video-container">
+        <video src="video1.mp4" id="video-slider" loop autoplay muted></video>
+      </div>
+      <style>
+        video {
+            filter: brightness(70%);
+
+
+            
+        }
+    </style>
+
+      
+    </section>
+    
+    
+
+    <!-- product section -->
+    <section class="product" id="products">
+      
+      <h1 class="heading">
+        
+        <span>Our Products</span>
+        <br>
+        <br>
+        <hr>
+        <br>
+      </h1>
+      
+       <div class="leftright">
+        <div class="productOne">
+
+          <img src="headerphoto2.png">
+          <h1>PulSAR-AI</h1>
+          <br />
+          <h2>A thermometer for Chest X-ray analysis  <br/> Using AI
+          <br/>
+          <p>
+            AI technology that provides objective metrics for Chest X-ray assessment for use in ER triage and in-patient treatment planning, resulting in better patient outcomes,  and lower healthcare costs.<br/>
+            
+          </p>
+          
+          <br>
+          
+        </div>
+        <br>
+        <br>
+        <div class="productTwo">
+          <img src="headerphoto1.png">
+          <h1>Derma-AI</h1>
+          <br />
+          
+          <h2>Melanoma Assessment for Early Detection</h2>
+          <br />
+          <p>
+            AI technology that detects change in skin lesions - the most telling sign of melanoma. <br/>
+          </p>
+          <br>
+        </div>
+      </div> 
+      <br>
+      <br>
+      <br>
+    </section>
+
+
+    
+    <!-- Mission Section -->
+    <img class ="missionphoto" src="headerphoto3.png" id="about">
+    <section class="mission" >
+      
+      <h1 class="heading">
+        
+       <span>Our Mission</span>
+      </h1>
+      
+      <hr>
+      <div class="statement">
+        
+        <p>
+          "VeyTel is dedicated to creating AI & computer vision technologies – to
+          improve quality of life..."  
+        </p>
+        
+      </div>
+      <br>
+      <div class="button-container"><a href="missionpage.html" class="btn2">Read More</a></div>
+      <br>
+      <br>
+      
+    </section>
+
+
+    <!-- quote section -->
+    <section class="quote" id="quote">
+      <h1 class="heading">
+        <span>What Professionals are saying about VeyTel </span>
+      </h1>
+      <hr>
+      <br>
+      <br>
+        <div class="slideshow">
+          <div class="slides">
+            <img src="quotes/quote1new.png">
+          </div>
+          <div class="slides">
+            <img src="quotes/quote2new.png">
+          </div>
+          <div class="slides">
+            <img src="quotes/quote3new.png">
+          </div>
+          <div class="slides">
+            <img src="quotes/quote4.png">
+          </div>
+          <div class="slider-btn-container">
+            <a class="slider-btn previous" onclick="setSlides(-1)"></a>
+            <a class="slider-btn next" onclick="setSlides(1)"></a>
+          </div>
+        </div>
+        <script src="slideshowScript.js"></script>
+        
+      <br>
+      <br>
+
+
+      <!-- Contact Section -->
+<section class="contactUs">
+<h1>Any Questions?</h1>
+<h2>Feel free to reach out.</h2>
+<div class="button-container"><a href="contact.html" class="btn">Contact Us</a></div>
+
+
+
+</section>
+      
+
+    <script src="script.js"></script>
+  </body>
+</html>
