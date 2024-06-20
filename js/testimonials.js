@@ -8,7 +8,7 @@ const testimonials = [
         quotedBy: '- CEO, of Venture Capitalist Specializing in Medical Software'
     },
     {
-        quote: '"There is an <strong>urgent need</strong> to improve the quantitative assessment of radio graphic severity in acute respiratory illness. The research ... has great clinical and research potential. Demonology has lagged behind other disciplines... therefore [VeyTel’s technology] represents a <strong>CRITICAL UNMET NEED</strong>."',
+        quote: '"There is an <strong>urgent need</strong> to improve the quantitative assessment of radiographic severity in acute respiratory illness. The research ... has great clinical and research potential. Pulmonology has lagged behind other disciplines... therefore [VeyTel’s technology] represents a <strong>CRITICAL UNMET NEED</strong>."',
         quotedBy: '- Major Midwestern Medical Center'
     },
     {
