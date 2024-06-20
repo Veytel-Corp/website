@@ -1,3 +1,6 @@
+window.setTimeout(()=>window.alert('you are viewing the staging website'), 1000);
+
+
 (function loadHeaderStyles(filePath = './css/header/header.css') {
     const headEl = document.querySelector('head');
     let headElInnerHTML = headEl.innerHTML;
@@ -129,18 +132,25 @@ function setPlaceholderHeight() {
 
     if(!navEl) {
         console.error("No element with class intro-nav found at the time of call.");
+        setTimeout(setPlaceholderHeight, 100);
         return false;
     }
     
     const navHeight = navEl.offsetHeight;
 
     placeholderEl.style.height = homeHeight - navHeight + 'px';
+    return true;
 }
 window.addEventListener('scroll', toggleScrollingNav);
 window.addEventListener('resize', toggleScrollingNav);
 
 window.addEventListener('resize', setPlaceholderHeight);
 window.addEventListener('load', setPlaceholderHeight);
+
+// setTimeout(()=>{
+//     setPlaceholderHeight
+//     console.log('set');
+// }, 1500);
 
 const callback = (entries, observer) => {
     entries.forEach(entry => {
