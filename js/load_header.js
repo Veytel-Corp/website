@@ -1,4 +1,4 @@
-window.setTimeout(()=>window.alert('you are viewing the staging website'), 1000);
+window.setTimeout(()=>window.alert('you are viewing the staging website'), 0);
 
 
 (function loadHeaderStyles(filePath = './css/header/header.css') {
@@ -130,27 +130,25 @@ function setPlaceholderHeight() {
 
     const homeHeight = homeEl.offsetHeight;
 
-    if(!navEl) {
-        console.error("No element with class intro-nav found at the time of call.");
-        setTimeout(setPlaceholderHeight, 100);
+    if(!navEl || !homeEl || !placeholderEl) {
+        console.error(`Required element not found when calling setPlaceholderHeight: ${ 
+            !homeEl ? '#landing' : !navEl ? '.intro-nav' : '.placeholder' 
+        }. Envokine function again in .5 seconds.`
+        );
+        setTimeout(setPlaceholderHeight, 500);
         return false;
     }
     
     const navHeight = navEl.offsetHeight;
-
     placeholderEl.style.height = homeHeight - navHeight + 'px';
+
     return true;
 }
 window.addEventListener('scroll', toggleScrollingNav);
 window.addEventListener('resize', toggleScrollingNav);
 
 window.addEventListener('resize', setPlaceholderHeight);
-window.addEventListener('load', setPlaceholderHeight);
-
-// setTimeout(()=>{
-//     setPlaceholderHeight
-//     console.log('set');
-// }, 1500);
+window.addEventListener('DOMContentLoaded', setPlaceholderHeight);
 
 const callback = (entries, observer) => {
     entries.forEach(entry => {
@@ -172,5 +170,3 @@ const observer = new IntersectionObserver(callback, {
     rootMargin: '0px',
     threshold: .7
 });
-
-console.log('1.1')
