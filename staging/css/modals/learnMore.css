@@ -44,11 +44,12 @@
     padding: 1vw 0;
     align-self: center;
     font-size: 1.5vw;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--lightest-color);
     font-weight: bold;
     border-radius: .5rem;
     cursor: pointer;
+    border: none;
 }
 
 .learn-more-modal div div button:hover {

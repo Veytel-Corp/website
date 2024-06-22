@@ -30,6 +30,9 @@ nav.intro-nav ul li {
     font-size: 1.5rem;
     cursor: pointer;
 }
+nav.intro-nav ul li:hover {
+    text-decoration: underline;
+}
 
 nav.intro-nav ul li a {
     color: var(--nav-text-color);

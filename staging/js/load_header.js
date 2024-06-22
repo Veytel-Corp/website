@@ -1,4 +1,4 @@
-window.setTimeout(()=>window.alert('you are viewing the staging website'), 0);
+// window.setTimeout(()=>window.alert('you are viewing the staging website'), 0);
 
 
 (function loadHeaderStyles(filePath = './css/header/header.css') {
@@ -24,6 +24,14 @@ window.setTimeout(()=>window.alert('you are viewing the staging website'), 0);
         .then(data => {
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
+
+            const toLandingElements = document.querySelectorAll('a[href*="#landing"]');
+
+            toLandingElements.forEach((el)=> {
+                console.log(el);
+                el.addEventListener('click', toLandingPage);
+            })
+
             const mainMenuEl = document.querySelector('.main-menu');
 
             observer.observe(mainMenuEl);
@@ -76,29 +84,35 @@ function toLandingPage() {
 function toggleMenuModal() {
     const menuModalEl = document.querySelector('.menu-modal');
     const mobileMenuModalEl = document.querySelector('.mobile-menu-modal');
-    const mainEl = document.querySelector('main');
-    const footerEl = document.querySelector('footer');
-    if (menuModalEl.classList.contains('hidden')) {
-        menuModalEl.classList.remove('hidden');
-        mobileMenuModalEl.classList.remove('hidden');
-        footerEl.classList.add('hidden');
-        mainEl.classList.add('hidden');
-    }
-    else {
-        menuModalEl.classList.add('hidden');
-        mobileMenuModalEl.classList.add('hidden');
-        footerEl.classList.remove('hidden');
-        mainEl.classList.remove('hidden');
-        
-        document.body.style.position = 'fixed';
-        // document.body.style.overflow = 'visible';
-        setTimeout(()=> {
-            document.body.style.position = 'initial';
-        }, 0)
-        
-    }
+
+    menuModalEl.classList.toggle('hidden');
+    mobileMenuModalEl.classList.toggle('hidden');
+
+    if (menuModalEl.classList.contains('hidden')) enableScroll();
+    else disableScroll();
     
 }
+
+function disableScroll() {
+    // Get the current page scroll position
+    scrollTop =
+        window.scrollY ||
+        document.documentElement.scrollTop;
+    scrollLeft =
+        window.scrollX ||
+        document.documentElement.scrollLeft,
+
+        // if any scroll is attempted,
+        // set this to the previous value
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function enableScroll() {
+    window.onscroll = function () { };
+}
+
 async function toggleScrollingNav() {
     if (window.scrollY === 0) {
         const scrollingNavEl = document.querySelector('.scrolling-nav');
@@ -131,7 +145,8 @@ function setPlaceholderHeight() {
     const homeHeight = homeEl.offsetHeight;
 
     if(!navEl || !homeEl || !placeholderEl) {
-        console.error(`Required element not found when calling setPlaceholderHeight: ${ 
+        placeholderEl.style.height = "100vh";
+        console.log(`Required element not found when calling setPlaceholderHeight: ${ 
             !homeEl ? '#landing' : !navEl ? '.intro-nav' : '.placeholder' 
         }. Envokine function again in .5 seconds.`
         );
