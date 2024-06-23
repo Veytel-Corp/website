@@ -22,7 +22,11 @@
             }
             modalEl.innerHTML = data;
             modalEl.addEventListener('click', toggleAboutModal);
-            modalEl.querySelector('button').addEventListener('click', toggleLearnMoreModal);
+            const openLearnMoreButtonElements = modalEl.querySelectorAll('button');
+            openLearnMoreButtonElements.forEach((button) => {
+                button.addEventListener('click', toggleLearnMoreModal);
+            })
+            
             setAboutModalOpeners();
         })
         .catch(error => {
