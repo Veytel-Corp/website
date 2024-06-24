@@ -1,7 +1,7 @@
 // window.setTimeout(()=>window.alert('you are viewing the staging website'), 0);
 
 
-(function loadHeaderStyles(filePath = './css/header/header.css') {
+(function loadHead(filePath = './css/header/header.css') {
     const headEl = document.querySelector('head');
     let headElInnerHTML = headEl.innerHTML;
     headElInnerHTML += `
@@ -28,7 +28,6 @@
             const toLandingElements = document.querySelectorAll('a[href*="#landing"]');
 
             toLandingElements.forEach((el)=> {
-                console.log(el);
                 el.addEventListener('click', toLandingPage);
             })
 
@@ -138,6 +137,8 @@ async function toggleScrollingNav() {
 }
 function setPlaceholderHeight() {
     
+    if (!isIndexPage()) return false;
+
     const homeEl = document.querySelector('#landing');
     const navEl = document.querySelector('.intro-nav');
     const placeholderEl = document.querySelector('.placeholder');
@@ -148,7 +149,7 @@ function setPlaceholderHeight() {
         placeholderEl.style.height = "100vh";
         console.log(`Required element not found when calling setPlaceholderHeight: ${ 
             !homeEl ? '#landing' : !navEl ? '.intro-nav' : '.placeholder' 
-        }. Envokine function again in .5 seconds.`
+        }. Invoking function again in .5 seconds.`
         );
         setTimeout(setPlaceholderHeight, 500);
         return false;
@@ -158,6 +159,16 @@ function setPlaceholderHeight() {
     placeholderEl.style.height = homeHeight - navHeight + 'px';
 
     return true;
+}
+
+function isIndexPage() {
+    const pathname = window.location.pathname;
+
+    if (pathname === '/' || pathname.endsWith('index.html') || pathname.includes('index.html#')) {
+        return true;
+    } else {
+        return false;
+    }
 }
 window.addEventListener('scroll', toggleScrollingNav);
 window.addEventListener('resize', toggleScrollingNav);
