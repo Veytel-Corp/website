@@ -48,6 +48,17 @@
     }
 }
 
+@media only screen and (max-width: 810px) {
+    #mission h2 {
+        font-size: var(--h2-font-size-810px);
+    }
+}
+@media only screen and (max-width: 428px) {
+    #mission h2 {
+        font-size: var(--h2-font-size-428px);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     #mission {
         overflow: hidden;
