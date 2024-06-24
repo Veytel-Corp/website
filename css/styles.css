@@ -27,6 +27,15 @@ a:hover {
 .hidden {
     display: none !important;
 }
+.disabled {
+    cursor:not-allowed !important;
+}
+
+.disabled:hover {
+    scale: 1 !important;
+    opacity: .3;
+}
+
 
 h1 {
     font-size: var(--h1-font-size-pc);
