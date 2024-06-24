@@ -7,18 +7,6 @@
     
 }
 
-/* #mission::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 12rem;
-    background: linear-gradient(to bottom, var(--light-background-color), transparent);
-    pointer-events: none;
-    z-index: 1;
-} */
-
 #mission::after {
     content: "";
     position: absolute;
@@ -52,6 +40,12 @@
 
 #mission .mission-statement-con h1 {
     align-self: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    #mission h2 {
+        font-size: var(--h3-font-size-pc);
+    }
 }
 
 @media only screen and (max-width: 768px) {

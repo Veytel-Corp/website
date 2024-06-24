@@ -29,19 +29,23 @@ a:hover {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: var(--h1-font-size-pc);
     font-family: var(--condensed-font-family);
     color: var(--primary-color);
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: var(--h2-font-size-pc);
     font-family: var(--reg-font-family);
     color: var(--primary-color);
 }
 
+h3 {
+    font-size: var(--h3-font-size-pc);
+}
+
 p {
-    font-size: 1.8rem;
+    font-size: var(--p-font-size-pc);
     font-family: var(--reg-font-family);
     color: var(--primary-color);
 }
@@ -83,14 +87,37 @@ label {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 810px) {
     h1 {
-        font-size: 2rem;
+        font-size: var(--h1-font-size-810px);
     }
     h2 {
-        font-size: 1rem;
+        font-size: var(--h2-font-size-810px);
+    }
+    h3 {
+        font-size: var(--h3-font-size-810px);
     }
     p {
-        font-size: 1rem;
+        font-size: var(--p-font-size-810px);
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    h1 {
+        /* font-size: 2.5rem; */
+        font-size: var(--h1-font-size-428px)
+    }
+    h2 {
+        /* font-size: 1.5rem; */
+        font-size: var(--h2-font-size-428px)
+    }
+    h3 {
+        /* font-size: 1.5rem; */
+        font-size: var(--h3-font-size-428px)
+    }
+
+    p {
+        /* font-size: 1.2rem; */
+        font-size: var(--p-font-size-428px)
     }
 }
