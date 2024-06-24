@@ -155,7 +155,7 @@ main {
         margin-top: 6.5rem;
     }
     .intro-con button {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .lm-btn {
         padding: .3rem .5rem
@@ -167,6 +167,21 @@ main {
 
 @media only screen and (max-width: 670px) {
     .intro-con h1 {
-        font-size: 1.5rem;
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .intro-con h1 {
+        font-size: 2rem;
+    }
+    .intro-con button {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 470px) { 
+    .intro-con h1 {
+        text-align: center;
     }
 }
