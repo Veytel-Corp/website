@@ -13,7 +13,7 @@
     --margin: ;
     --border-radius: ;
 
-    --mobile-nav-height: 6em;
+    --mobile-nav-height: 4rem;
 
     --main-left-right-padding: 7%;
 
@@ -33,4 +33,21 @@
     --slab-font-family: 'Roboto Slab', serif;
 
     --above-header: 999999;
+
+    --h1-font-size-pc: 4.5rem;
+    --h2-font-size-pc: 3rem;
+    --h3-font-size-pc: 2.5rem;
+    --p-font-size-pc: 1.8rem;
+
+    /* iPad Size 810px */
+    --h1-font-size-810px: 4rem;
+    --h2-font-size-810px: 2rem;
+    --h3-font-size-810px: 2rem;
+    --p-font-size-810px: 1.5rem;
+
+    /* Phone Size 428px */
+    --h1-font-size-428px: 2.5rem;
+    --h2-font-size-428px: 1.5rem;
+    --h3-font-size-428px: 1.5rem;
+    --p-font-size-428px: 1.2rem;
 }

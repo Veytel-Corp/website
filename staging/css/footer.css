@@ -102,6 +102,11 @@ a {
 }
 
 @media only screen and (max-width: 1200px) {
+    .footer-content-con {
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 3.5%;
+    }
     .footer-content-con h2 {
         font-size: 4vw;
         font-family: var(--slab-font-family);

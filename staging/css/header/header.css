@@ -166,6 +166,7 @@ nav.scrolling-nav {
 nav.scrolling-nav .logo {
     margin: 0;
     padding: 0;
+    height: auto;
     min-width: 15rem;
     cursor: pointer;
 }
@@ -195,11 +196,10 @@ nav.scrolling-nav .menu-button {
         padding-top: 1rem;
     }
     .main-menu .logo {
-        width: fit-content;
         height: 4rem;
     }
     .main-menu ul li {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -208,11 +208,10 @@ nav.scrolling-nav .menu-button {
         padding-top: 1rem;
     }
     .main-menu .logo {
-        width: fit-content;
         height: 3.5rem;
     }
     .main-menu ul li {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 
