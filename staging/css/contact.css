@@ -65,7 +65,7 @@ form textarea {
   min-height: 4rem;
 }
 
-form input:not(input[type="submit"]) {
+form input:not(input[type="submit"]), form textarea {
   border-radius: 0;
 }
 
