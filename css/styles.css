@@ -78,6 +78,10 @@ video::-webkit-media-controls {
     text-decoration: none;
 }
 
+label {
+    font-family: var(--reg-font-family);
+}
+
 
 @media only screen and (max-width: 768px) {
     h1 {

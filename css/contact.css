@@ -1,69 +1,230 @@
-/* 
-contact form 
- */
+@import url("./variables.css");
 
-
- :root{
-    --veytel-blue: #7092da;
- }
-
-/* background */
-body{
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)), url(./assets/images/contact_photo.jpg);
-    background-size: cover;
-    background-position: center;
-
-    font-family: Gill Sans MT;
-    color:rgb(255, 255, 255);
-    font-size: 20px;
-    margin: auto;
-    margin-top: 15rem;
-    max-width: 650px;
-    
+html {
+  height: 100vh;
 }
 
-/* submit button */
-.form-control{
-    width: 600px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #3a3a3a;
-    color: var(--veytel-blue);
-    font-size: 18px;
-    margin-bottom: 16px;
-    max-width: 350px;
+body {
+  text-align: center;
+  /* background: linear-gradient(rgba(0, 0, 50, 0.5),rgba(0, 0, 50, 0.5)), url(../assets/images/contact_photo.jpg); */
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(101, 139, 185, 0.5)),
+    url(https://res.cloudinary.com/drrssdubw/image/upload/v1719198471/contact_photo_bnxuyn.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-input{
-    height: 45px;
+main.contact-main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
 }
 
-form .submit{
-    background: #3dcab1;
-    border-color: transparent;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 50px;
-    margin-top: 20px;
-    margin: auto;
-    max-width: 200px;
-    text-align: center;
-    
-
+main.contact-main h1,
+main.contact-main h2 {
+  text-align: center;
+  color: var(--light-text-color);
 }
 
-form .submit:hover{
-    background-color:#4486ff;
-    cursor: pointer;
+main.contact-main h1 {
+  width: 35rem;
+  font-size: 3rem;
 }
 
-.contact-container{
+main.contact-main h2 {
+  font-size: 2rem;
+}
+
+main.contact-main form {
+  width: fit-content;
+  min-width: 35rem;
+  padding: 2rem 9rem;
+  background-color: var(--lightest-background-color);
+}
+
+form input,
+form textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #3a3a3a;
+  font-size: 18px;
+  margin-bottom: 16px;
+  max-width: 350px;
+  width: 35rem;
+  min-width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: var(--secondary-light-color);
+}
+
+form textarea {
+  min-height: 4rem;
+}
+
+form input[type="submit"] {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  width: 15vw;
+  min-width: none;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  scale: 1.05;
+  filter: brightness(120%);
+  transition-duration: 0.1s;
+}
+
+
+/* THANK YOU AFTER SUCCESSFUL SUBMIT */
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: var(--above-header);
+}
+
+.thank-you h2 {
+  text-decoration: underline;
+}
+
+.thank-you .to-home-btn {
+  width: fit-content;
+  padding: 1rem 3rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: var(--reg-font-family);
+}
+
+.thank-you .to-home-btn:hover {
+  text-decoration: none;
+  scale: 1.05;
+  filter: brightness(120%);
+  transition-duration: 0.1s;
+}
+
+.something-went-wrong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     background-color: white;
-    margin:auto;
-    max-width: 650px;
-    box-shadow: 0px 5px 5px rgba(31, 31, 31, 0.3);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: var(--above-header);
+}
+
+.something-went-wrong h1 {
+    color: var(--error);
+}
+
+.something-went-wrong h2, .something-went-wrong p, .something-went-wrong p a {
+    color: var(--focus-second);
+}
+
+.something-went-wrong p a {
+    font-weight: bold;
+}
+
+.something-went-wrong .btn-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: var(--reg-font-family);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.something-went-wrong .btn-con .to-home-btn, .something-went-wrong .btn-con .try-again {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+.something-went-wrong .btn-con .to-home-btn {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.something-went-wrong .btn-con .try-again {
+    color: var(--light-text-color);
+    background-color: var(--primary-color);
+}
+
+.something-went-wrong .btn-con .to-home-btn:hover, .something-went-wrong .btn-con .try-again:hover {
+    transition-duration: .1s;
+    scale: 1.05;
+}
+
+/* ANIMATED LOADER */
+
+.loader-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.468);
+  backdrop-filter: blur(0.15rem);
+  z-index: var(--above-header);
+}
+.loader {
+  position: absolute;
+  border: 16px solid var(--secondary-light-color); /* Light grey */
+  border-top: 16px solid var(--secondary-color); /* Blue */
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 2s linear infinite;
+  margin: auto; /* Center the loader */
+  display: block; /* Ensure the loader takes up block space */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+    main.contact-main h1 {
+        width: 100%;
+        font-size: 2rem;
+      }
+      
+      main.contact-main h2 {
+        font-size: 1rem;
+      }
 }
