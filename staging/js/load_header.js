@@ -164,7 +164,7 @@ function setPlaceholderHeight() {
 function isIndexPage() {
     const pathname = window.location.pathname;
     console.log(pathname)
-    if (pathname === '/' || pathname.endsWith('index.html') || pathname.endsWith('/staging') || pathname.includes('index.html#')) {
+    if (pathname === '/' || pathname.endsWith('index.html') || pathname.endsWith('/staging/') || pathname.includes('index.html#')) {
         return true;
     } else {
         return false;
