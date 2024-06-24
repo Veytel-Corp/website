@@ -13,8 +13,9 @@ formEl.addEventListener('submit', async (e)=> {
         const formObject = Object.fromEntries(formData.entries());
 
         try {
+            const requestURL = "https://script.google.com/macros/s/AKfycbyWLGWbuyX_AXNWlYqCo6CLBTRhPBR1jrUlYFadbEgn066m-gF5lgDQmFZEr_3y7GYrRw/exec"
             loaderEl.classList.remove('hidden')
-            const response = await fetch('https://script.google.com/macros/s/AKfycbwFSVmOtZnXbUSUDZQoGFL8AaEDSaB1vZjdQDlMsLVux7kHRXhg64M7XQHbJpPNv2hXIw/exec', {
+            const response = await fetch(requestURL, {
                 method: 'POST',
                 body: new URLSearchParams(formObject)
             });
