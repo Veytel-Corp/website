@@ -187,6 +187,10 @@ nav.scrolling-nav .menu-button {
     cursor: pointer;
 }
 
+nav .scrolling-nav-menu-btn-text {
+    color: var(--nav-text-color)
+}
+
 .revealed-scrolling-nav {
     top: 0 !important;
 }
@@ -245,7 +249,8 @@ nav.scrolling-nav .menu-button {
     }
 
     header .scrolling-nav .menu-button {
-        padding: 0 .5rem;
+        padding: .5rem;
+        height: fit-content;
     }
 
     header .burger-menu div {
@@ -256,6 +261,13 @@ nav.scrolling-nav .menu-button {
 @media only screen and (max-width: 768px) {
     header .scrolling-nav {
         padding: 1rem 7%;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    header .scrolling-nav-menu-btn-text {
+        display: none;
     }
 
 }
