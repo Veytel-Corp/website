@@ -15,12 +15,12 @@ li {
     list-style: none;
 }
 
-a {
+a, .a-styles {
     text-decoration: none;
     cursor: pointer;
     color: var(--light-text-color)
 }
-a:hover {
+a:hover, .a-styles:hover {
     text-decoration: underline;
 }
 
