@@ -113,6 +113,7 @@ function enableScroll() {
 }
 
 async function toggleScrollingNav() {
+    const pathname = window.location.pathname;
     if (window.scrollY === 0) {
         const scrollingNavEl = document.querySelector('.scrolling-nav');
         if(!scrollingNavEl) return false;
@@ -124,7 +125,7 @@ async function toggleScrollingNav() {
             }, 10)
             scrollingNavEl.classList.remove("revealed-scrolling-nav");
     }
-    if (isAtBottom()) {
+    if (pathname != "/contact.html" && isAtBottom()) {
         const scrollingNavEl = document.querySelector('.scrolling-nav');
         if(!scrollingNavEl || isWidthLessThan(768)) return false;
         scrollingNavEl.classList.add('hidden');
@@ -163,7 +164,6 @@ function setPlaceholderHeight() {
 
 function isIndexPage() {
     const pathname = window.location.pathname;
-    console.log(pathname)
     if (pathname === '/' || pathname.endsWith('index.html') || pathname.endsWith('/staging/') || pathname.includes('index.html#')) {
         return true;
     } else {
