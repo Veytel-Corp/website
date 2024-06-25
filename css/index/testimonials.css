@@ -63,10 +63,12 @@ img.hexagons {
     .quote-con {
         padding: 0;
         min-height: 14rem;
+        justify-content: flex-start;
     }
     .circle-btn {
         width: 3rem !important;
-        margin-top: 1rem;
+        top: 0;
+        /* margin-top: 1rem; */
     }
     .quote-con p{
         margin: .5rem 0 !important;
