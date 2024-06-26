@@ -2,7 +2,6 @@
 
 #testimonials {
     padding:7%;
-    overflow-y: hidden;
     position: relative;
     background-color: var(--light-background-color);
 }

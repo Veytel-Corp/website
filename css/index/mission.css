@@ -31,12 +31,13 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    text-align:left;
+    text-align:justify;
     position: sticky;
     padding: var(--main-left-right-padding);
     gap: 3rem;
     justify-content: center;
 }
+
 
 #mission .mission-statement-con h1 {
     align-self: center;
@@ -52,6 +53,9 @@
     #mission h2 {
         font-size: var(--h2-font-size-810px);
     }
+    #mission .mission-statement-con {
+        text-align:left;
+    }
 }
 @media only screen and (max-width: 428px) {
     #mission h2 {
@@ -60,9 +64,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    #mission {
+    /* #mission {
         overflow: hidden;
-    }
+    } */
     #mission img {
         transform: translateY(5rem);
     }

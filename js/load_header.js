@@ -24,7 +24,6 @@
         .then(data => {
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
-            // setAnchorOffset();
 
             const toLandingElements = document.querySelectorAll('a[href*="#landing"]');
 

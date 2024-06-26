@@ -2,12 +2,10 @@
 
 #products {
     background-color: var(--light-background-color);
-    /* display: flex; */
     flex-wrap: wrap;
     position: relative;
     height: fit-content;
     width: 100%;
-    /* margin-top: var(--main-left-right-padding) */
     margin-bottom: 3.5%;
 }
 

@@ -195,6 +195,13 @@ nav .scrolling-nav-menu-btn-text {
     top: 0 !important;
 }
 
+@media only screen and (max-width: 1042px) {
+    .main-menu {
+        padding: 1rem 0;
+        justify-content: space-around;
+    }
+}
+
 @media only screen and (max-width: 1125px) {
     .main-menu {
         padding-top: 1rem;
@@ -219,7 +226,7 @@ nav .scrolling-nav-menu-btn-text {
     }
 }
 
-@media only screen and (max-width: 912px) {
+@media only screen and (max-width: 916px) {
     header * {
         transition-duration: 0s !important;
     }
