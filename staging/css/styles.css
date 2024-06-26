@@ -95,6 +95,13 @@ label {
     font-family: var(--reg-font-family);
 }
 
+@media only screen and (max-width: 820px) {
+    #products, #mission, #testimonials {
+        scroll-margin-top: 4rem;
+        overflow: initial;
+    }
+}
+
 
 @media only screen and (max-width: 810px) {
     h1 {
