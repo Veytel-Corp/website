@@ -31,7 +31,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    text-align:justify;
     position: sticky;
     padding: var(--main-left-right-padding);
     gap: 3rem;
@@ -52,9 +51,6 @@
 @media only screen and (max-width: 810px) {
     #mission h2 {
         font-size: var(--h2-font-size-810px);
-    }
-    #mission .mission-statement-con {
-        text-align:left;
     }
 }
 @media only screen and (max-width: 428px) {

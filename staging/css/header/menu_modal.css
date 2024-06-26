@@ -110,3 +110,18 @@ ul.modal-nav-list {
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+@media only screen and (max-height: 700px) {
+    .modal-nav-list li {
+        font-size: 5vh;
+        padding: 0;
+        line-height: initial !important;
+    }
+    .menu-modal-footer ul li {
+        font-size: 4vh;
+        line-height: initial;
+    }
+    .menu-modal .chestxray-img {
+        display: none;
+    }
+}
