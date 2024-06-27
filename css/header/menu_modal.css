@@ -65,7 +65,7 @@
 }
 
 .menu-modal ul li {
-    line-height: 2rem;
+    /* line-height: 2rem; */
 } 
 
 ul.modal-nav-list {
@@ -81,7 +81,7 @@ ul.modal-nav-list {
     color: var(--light-text-color);
     font-weight: bold;
     font-size: 2.5rem;
-    padding: .6rem 0;
+    /* padding: .6rem 0; */
     cursor: pointer;
 }
 
@@ -122,6 +122,12 @@ ul.modal-nav-list {
         line-height: initial;
     }
     .menu-modal .chestxray-img {
-        display: none;
+        height: 100%;
     }
 }
+
+/* @media only screen and (max-height: 700px) and (max-width: 1080px) {
+    .menu-modal .chestxray-img {
+        height: 100%;
+    }
+} */
