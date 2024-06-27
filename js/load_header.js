@@ -1,4 +1,4 @@
-// window.setTimeout(()=>window.alert('you are viewing the staging website'), 0);
+console.log("Staging Site - v1.8");
 
 
 (function loadHead(filePath = './css/header/header.css') {
