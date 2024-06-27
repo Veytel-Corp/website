@@ -91,6 +91,12 @@ video::-webkit-media-controls {
     text-decoration: none;
 }
 
+.no-break-text {
+    display: inline-flex; 
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
 label {
     font-family: var(--reg-font-family);
 }
