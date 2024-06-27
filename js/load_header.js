@@ -1,4 +1,4 @@
-console.log("Staging Site - v1.8");
+console.log("Staging Site - v1.9");
 
 
 (function loadHead(filePath = './css/header/header.css') {
