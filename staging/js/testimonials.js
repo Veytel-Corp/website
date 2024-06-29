@@ -25,7 +25,7 @@ const quotedByEl = quoteConEl.querySelector('.quoted-by');
 const circleNextButtonEl = document.querySelector('.circle-next-arrow');
 const circlePrevButtonEl = document.querySelector('.circle-prev-arrow');
 const mobileNextButtonEl = document.querySelector('.mobile-next-arrow-con');
-const mobilePrevButtonEl = document.querySelector('mobile-prev-arrow-con');
+const mobilePrevButtonEl = document.querySelector('.mobile-prev-arrow-con');
 
 const nextBtns = [circleNextButtonEl, mobileNextButtonEl];
 const prevBtns = [circlePrevButtonEl, mobilePrevButtonEl];
@@ -48,6 +48,7 @@ nextBtns.forEach((button) => {
     })
 })
 
+console.log(prevBtns)
 prevBtns.forEach((button) => {
     button.addEventListener('click', ()=> {
         if (i > 0)
