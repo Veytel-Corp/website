@@ -80,7 +80,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(transparent, var(--secondary-color), transparent)
+        background: linear-gradient(transparent, #bdd3f6 , transparent)
     }
     .mobile-arrow-con:hover {
         filter: brightness(110%);
