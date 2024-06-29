@@ -126,7 +126,7 @@
       
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 510px) {
     .quote-con {
         min-height: 30rem;
     }
