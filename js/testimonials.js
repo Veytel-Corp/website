@@ -23,7 +23,12 @@ const quoteConEl = document.querySelector('.quote-con');
 const quoteEl = quoteConEl.querySelector('.quote');
 const quotedByEl = quoteConEl.querySelector('.quoted-by');
 const circleNextButtonEl = document.querySelector('.circle-next-arrow');
-const circleBackButtonEl = document.querySelector('.circle-prev-arrow');
+const circlePrevButtonEl = document.querySelector('.circle-prev-arrow');
+const mobileNextButtonEl = document.querySelector('.mobile-next-arrow-con');
+const mobilePrevButtonEl = document.querySelector('mobile-prev-arrow-con');
+
+const nextBtns = [circleNextButtonEl, mobileNextButtonEl];
+const prevBtns = [circlePrevButtonEl, mobilePrevButtonEl];
 
 let i = 0;
 let numer_of_testimonials = testimonials.length;
@@ -31,23 +36,27 @@ let numer_of_testimonials = testimonials.length;
 quoteEl.innerHTML = testimonials[i].quote;
 quotedByEl.innerHTML = testimonials[i].quotedBy;
 
-circleNextButtonEl.addEventListener('click', ()=> {
-    if (i < numer_of_testimonials - 1)
-        i++;
-    else
-        i = 0;
-    quoteEl.innerHTML = testimonials[i].quote;
-    quotedByEl.innerHTML = testimonials[i].quotedBy;
-
+nextBtns.forEach((button) => {
+    button.addEventListener('click', ()=> {
+        if (i < numer_of_testimonials - 1)
+            i++;
+        else
+            i = 0;
+        quoteEl.innerHTML = testimonials[i].quote;
+        quotedByEl.innerHTML = testimonials[i].quotedBy;
+    
+    })
 })
 
-circleBackButtonEl.addEventListener('click', ()=> {
-    if (i > 0)
-        i--;
-    else
-        i = numer_of_testimonials-1;
-    quoteEl.innerHTML = testimonials[i].quote;
-    quotedByEl.innerHTML = testimonials[i].quotedBy;
-
+prevBtns.forEach((button) => {
+    button.addEventListener('click', ()=> {
+        if (i > 0)
+            i--;
+        else
+            i = numer_of_testimonials-1;
+        quoteEl.innerHTML = testimonials[i].quote;
+        quotedByEl.innerHTML = testimonials[i].quotedBy;
+    
+    })
 })
 

@@ -33,6 +33,7 @@
 .quote-con p {
     font-family: var(--slab-font-family);
     margin-top: 3rem;
+    
 }
 
 .testimonials-con img.circle-btn {
@@ -44,20 +45,62 @@
     opacity: .6;
 }
 
+.mobile-arrow-con {
+    cursor: pointer;
+    display: none;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+    .quote-con {
+        min-height: 35rem;
+    }
+}
+
+@media only screen and (max-width: 847px) {
+    .quote-con {
+        min-height: 37rem;
+    }
+}
+
 @media only screen and (max-width: 810px) {
     
     .quote-con {
         padding: 0;
-        min-height: 14rem;
+        min-height: 25rem;
         justify-content: flex-start;
     }
     .circle-btn {
-        width: 3rem !important;
-        top: 0;
-        /* margin-top: 1rem; */
+        display: none;
     }
+
+    .mobile-arrow-con {
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(transparent, var(--secondary-color), transparent)
+    }
+    .mobile-prev-arrow-con {
+        top: 0;
+        left: -7.5%;
+    }
+    .mobile-prev-arrow-con img{
+        transform: rotate(180deg);
+    }
+    .mobile-next-arrow-con {
+        top: 0;
+        right: -7.5%;
+    }
+    
+    .mobile-arrow-con img {
+        /* opacity: .7; */
+        width: 6vw;
+    }
+
     .quote-con p{
-        margin: .5rem 0 !important;
+        margin: .5rem !important;
     }
     .testimonials-con {
         display: grid;
@@ -81,4 +124,10 @@
         margin-right: 3rem;
       }
       
+}
+
+@media only screen and (max-width: 300px) {
+    .quote-con {
+        min-height: 30rem;
+    }
 }
