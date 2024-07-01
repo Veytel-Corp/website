@@ -13,7 +13,7 @@ $email_subject = "New Website Contact Form Submission";
 $email_body = "User name: $name.\n". "User Email: $visitor_email.\n". "User Message: $message.\n";
 
 // destination email
-$to = "lisasquillante@veytel.com";
+$to = "info@veytel.com";
 
 $headers = "From: $email_from \r\n";
 
