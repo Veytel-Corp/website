@@ -1,0 +1,125 @@
+@import url("../variables.css");
+
+.mobile-menu-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--nav-background);
+}
+
+.mobile-menu-modal-header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7%;
+}
+
+.mobile-menu-modal-header img.logo {
+  width: 50%;
+}
+.mobile-menu-modal-header img.x {
+  width: 7%;
+}
+
+.mobile-menu-modal-main {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-modal-main ul li {
+  font-size: 2rem;
+  font-family: var(--reg-font-family);
+  color: var(--light-text-color);
+  font-weight: bold;
+}
+
+.mobile-menu-modal-main img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.mobile-menu-modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--nav-background);
+}
+/* 
+.mobile-menu-modal-header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+} */
+.mobile-menu-modal-header img.logo {
+  width: 50%;
+}
+.mobile-menu-modal-header img.x {
+  cursor: pointer;
+  width: 7%;
+}
+
+.mobile-menu-modal-main {
+  position: relative;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+}
+
+.mobile-menu-modal-main ul li {
+  font-size: 5vh;
+  font-family: var(--reg-font-family);
+  color: var(--light-text-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.mobile-menu-modal-main img {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+  height: 80%;
+  max-width: 90%;
+}
+
+.mobile-menu-modal-footer {
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  display: inline;
+}
+
+.mobile-menu-modal-footer p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media only screen and (max-width: 810px) {
+  .menu-modal {
+    display: none !important;
+  }
+  .mobile-menu-modal {
+    display: initial;
+  }
+}

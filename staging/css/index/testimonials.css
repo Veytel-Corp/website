@@ -1,0 +1,137 @@
+@import url("../variables.css");
+
+#testimonials {
+    padding:7%;
+    position: relative;
+    background-color: var(--light-background-color);
+}
+
+#testimonials h2 {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.testimonials-con {
+    display: flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.quote-con {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    padding: 0 var(--main-left-right-padding);
+    z-index: 10;
+    min-height: 25rem;
+}
+
+.quote-con p {
+    font-family: var(--slab-font-family);
+    margin-top: 3rem;
+    
+}
+
+.testimonials-con img.circle-btn {
+    height: fit-content;
+}
+
+.testimonials-con .circle-btn:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+.mobile-arrow-con {
+    cursor: pointer;
+    display: none;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+    .quote-con {
+        min-height: 35rem;
+    }
+}
+
+@media only screen and (max-width: 847px) {
+    .quote-con {
+        min-height: 37rem;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    
+    .quote-con {
+        padding: 0;
+        min-height: 25rem;
+        justify-content: flex-start;
+    }
+    .circle-btn {
+        display: none;
+    }
+
+    .mobile-arrow-con {
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(transparent, #bdd3f6 , transparent)
+    }
+    .mobile-arrow-con:hover {
+        filter: brightness(110%);
+        scale: 1.1
+    }
+    .mobile-prev-arrow-con {
+        top: 0;
+        left: -7.5%;
+    }
+    .mobile-prev-arrow-con img{
+        transform: rotate(180deg);
+    }
+    .mobile-next-arrow-con {
+        top: 0;
+        right: -7.5%;
+    }
+    
+    .mobile-arrow-con img {
+        /* opacity: .7; */
+        width: 6vw;
+    }
+
+    .quote-con p{
+        margin: .5rem !important;
+    }
+    .testimonials-con {
+        display: grid;
+        grid-template-areas:
+          "quote-con quote-con"
+          "prev-arrow next-arrow";
+        justify-items: center;
+      }
+      
+      .quote-con {
+        grid-area: quote-con;
+      }
+      
+      .circle-prev-arrow {
+        grid-area: prev-arrow;
+        margin-left: 3rem;
+      }
+      
+      .circle-next-arrow {
+        grid-area: next-arrow;
+        margin-right: 3rem;
+      }
+      
+}
+
+@media only screen and (max-width: 510px) {
+    .quote-con {
+        min-height: 30rem;
+    }
+}
