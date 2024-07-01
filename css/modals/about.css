@@ -1,0 +1,204 @@
+.about-modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+}
+
+.about-modal .desktop {
+    height: 40vw;
+    width: 80%;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    /* background-image: url(../../assets/images/modal/cream.png); */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    /* background-size: ; */
+
+}
+
+.about-modal .desktop img.background {
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.about-modal .desktop div.top-right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-modal .desktop div.top-right img {
+    height: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-modal .desktop img.visionary {
+    height: 80%;
+    position: absolute;
+    align-self: center;
+    left: 5rem;
+    z-index: 5;
+}
+
+.about-modal .text-con {
+    padding-right: 3.5%;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.about-modal .text-con h1 {
+    font-size: 3vw;
+    color: var(--lightest-color);
+    /* margin-bottom: 3.5%; */
+}
+
+.about-modal .text-con p {
+    font-size: 1.2vw;
+    color: var(--lightest-color);
+    z-index: 10;
+    text-align: center;
+}
+
+.about-modal .text-con button {
+    width: 40%;
+    padding: .5vw 0;
+    align-self: center;
+    font-size: 1.5vw;
+    
+    background-color: var(--lightest-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.about-modal .desktop div button:hover {
+    scale: 1.05;
+    filter: brightness(1.05);
+    transition-duration: .1s;
+}
+
+.about-modal .mobile {
+    display: none;
+}
+
+.about-modal .mobile {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lightest-color);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-modal .mobile img.background {
+    height: 100%;
+    z-index: 1;
+    filter: brightness(110%);
+}
+
+.about-modal .mobile .x {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 10;
+}
+
+.about-modal .mobile .content-con {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    /* padding: 1rem; */
+}
+
+.about-modal .mobile .text-con {
+    display: flex;
+    justify-content: flex-start;
+    height: fit-content;
+    max-height: 45%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    /* background-color: rgba(255, 255, 255, 0.256); */
+}
+
+.about-modal .mobile .content-con h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.about-modal .mobile .text-con p {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.about-modal .mobile button {
+    width: 75%;
+    min-width: fit-content;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+
+@media only screen and (max-width: 810px) {
+    .about-modal {
+        border: none;
+    }
+    .about-modal .desktop {
+        display: none !important;
+    }
+    .about-modal .mobile {
+        display: flex;
+    }
+}
