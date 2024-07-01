@@ -48,7 +48,6 @@ nextBtns.forEach((button) => {
     })
 })
 
-console.log(prevBtns)
 prevBtns.forEach((button) => {
     button.addEventListener('click', ()=> {
         if (i > 0)

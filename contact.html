@@ -3,61 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veytel - Contact Us</title>
+    <title>VeyTel - Contact Us</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
 
-    <link
-      rel="stylesheet"
-      href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-
-
-    <link rel="stylesheet" href="contact.css" />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div id="menu-bar" class="fas fa-bars"></div>
-      <a href="#" class="logo"
-        ><span><img src="veytelgreen.png" /></span
-      ></a>
+    <div class="learn-more-modal hidden"></div>
+    <div class="about-modal hidden"></div>
+    <header></header>
+    <main class="contact-main">
+      <h1>Have a Question or want to Connect?</h1>
+      <h2>Send us a message below.</h2>
+      <br>
+      <form class="contact-form" method="POST" action="">
 
-      <nav class="navbar">
-        
-        <a href="index.html#home">Home</a>
-        <a href="index.html#products">Products</a>
-        <a href="index.html#about">Mission</a>
-        <a href="ourteam.html">Team</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="publications.html">Publications</a>
-        
-      </nav>
-
-      <div class="icons"></div>
-    </header>
-
-    <!-- contact form -->
-    <div class="content-title">
-      <h1>Have questions? Want to connect?</h1>
-      <h2>Leave us a message below</h2>
+        <input name="name" id="name" type="text" placeholder="Your Name" required>
+        <br>
+        <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
+        <br>
+        <textarea name="message" id="message" placeholder="Message" row=4 required></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+  </main>
+  
+  <div class="loader-con hidden">
+    <div class="loader"></div>
   </div>
-  <br>
-<div class="contact-container"> 
-  <br>
-    <section class="contact" id="form">
 
+  <div class="thank-you hidden">
+    <h1>Thank You!</h1>
+    <h2>Your message was successfully sent to VeyTel.</h2>
+    <p>A team member will review your message and reach out to you soon.</p>
+    <a href="index.html" class="to-home-btn">Return Home</a>
+  </div>
 
-        <div class="contact-form">
-            <form id="contact-form" method="post" action="contact-form-handler.php">
-            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
-            <br>
-            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-            <br>
-            <textarea name="message" class="form-control" placeholder="Message" row=4 required></textarea>
-            <br>
-            <input type="submit" class="form-control submit" value="Send Message">
+  <div class="something-went-wrong hidden">
+    <h1>An Error Ocurred</h1>
+    <h2>Something went wrong when attempting to send your message.</h2>
+    <p>Please try again or send an email directly to <a href="mailto: support@veytel.com">info@veytel.com</a></p>
+    <div class="btn-con">
+      <a href="/contact.html" class="try-again">Try Again</a>
+      <a href="index.html" class="to-home-btn">Return Home</a>
+    </div>
+  </div>
 
-           </form>
-          </div>   
-           <script src="script.js"></script>
+  <script src="./js/load_header.js"></script>
+  <script src="./js/contact.js"></script>
+  <script src="./js/modals/learn_more.js"></script>
+  <script src="./js/modals/about.js"></script>
   </body>
 </html>

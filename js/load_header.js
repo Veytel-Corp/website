@@ -1,6 +1,3 @@
-console.log("Staging Site - v1.9");
-
-
 (function loadHead(filePath = './css/header/header.css') {
     const headEl = document.querySelector('head');
     let headElInnerHTML = headEl.innerHTML;
@@ -148,10 +145,10 @@ function setPlaceholderHeight() {
 
     if(!navEl || !homeEl || !placeholderEl) {
         placeholderEl.style.height = "100vh";
-        console.log(`Required element not found when calling setPlaceholderHeight: ${ 
-            !homeEl ? '#landing' : !navEl ? '.intro-nav' : '.placeholder' 
-        }. Invoking function again in .5 seconds.`
-        );
+        // console.log(`Required element not found when calling setPlaceholderHeight: ${ 
+        //     !homeEl ? '#landing' : !navEl ? '.intro-nav' : '.placeholder' 
+        // }. Invoking function again in .5 seconds.`
+        // );
         setTimeout(setPlaceholderHeight, 500);
         return false;
     }
