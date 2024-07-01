@@ -1,0 +1,154 @@
+.learn-more-modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+}
+
+.learn-more-modal .desktop {
+    height: 40vw;
+    width: 80%;
+    display: flex;
+    background-color: white;
+
+}
+
+.learn-more-modal .desktop img {
+    height: 100%;
+}
+
+.learn-more-modal .desktop div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5%;
+}
+
+.learn-more-modal .desktop div h1 {
+    text-align: center;
+    font-size: 5vw;
+    line-height: 5vw;
+    /* margin-bottom: 3.5%; */
+}
+
+.learn-more-modal .desktop div p {
+    font-size: 1.5vw;
+}
+
+.learn-more-modal .desktop div button {
+    width: 40%;
+    padding: 1vw 0;
+    align-self: center;
+    font-size: 1.5vw;
+    background-color: var(--primary-color);
+    color: var(--lightest-color);
+    font-weight: bold;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.learn-more-modal .desktop div button:hover {
+    scale: 1.05;
+    filter: brightness(1.05);
+    transition-duration: .1s;
+}
+
+.learn-more-modal .mobile {
+    display: none;
+}
+
+.learn-more-modal .mobile {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--secondary-light-color);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.learn-more-modal .mobile img.background {
+    height: 100%;
+    z-index: 1;
+    filter: brightness(110%);
+    opacity: .5;
+}
+
+.learn-more-modal .mobile .x {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 10;
+}
+
+.learn-more-modal .mobile .content-con {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1rem;
+}
+
+.learn-more-modal .mobile .text-con {
+    display: flex;
+    justify-content: flex-start;
+    height: fit-content;
+    max-height: 45%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.256);
+}
+
+.learn-more-modal .mobile .content-con h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.learn-more-modal .mobile .text-con p {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.learn-more-modal .mobile button {
+    width: 75%;
+    min-width: fit-content;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+
+@media only screen and (max-width: 810px) {
+    .learn-more-modal {
+        border: none;
+    }
+    .learn-more-modal .desktop {
+        display: none !important;
+    }
+    .learn-more-modal .mobile {
+        display: flex;
+    }
+}
