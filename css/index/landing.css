@@ -87,14 +87,14 @@ main {
     color: var(--light-text-color);
     /* background-color: white;
     color: black; */
-    padding: 1rem 2.5rem;
+    padding: .7rem 2.5rem;
     margin-right: 1rem;
 }
 
 .cu-btn {
-    background-color: var(--secondary-color);
+    background-color: var(--light-background-color);
     color: var(--primary-color);
-    padding: 1rem 1.5rem;
+    padding: .7rem 2.5rem;
 }
 
 

@@ -121,6 +121,7 @@ async function toggleScrollingNav() {
                 mainMenuEl.classList.remove('hidden');
             }, 10)
             scrollingNavEl.classList.remove("revealed-scrolling-nav");
+            scrollingNavEl.classList.remove("nav-background-2");
     }
     if (pathname != "/contact.html" && isAtBottom()) {
         const scrollingNavEl = document.querySelector('.scrolling-nav');
@@ -184,6 +185,9 @@ const callback = (entries, observer) => {
                 mainMenuEl.classList.add('hidden');
             }, 10)
             scrollingNavEl.classList.add("revealed-scrolling-nav");
+            setTimeout(()=> {
+                scrollingNavEl.classList.add("nav-background-2");
+            }, 200)
         }
     });
 };

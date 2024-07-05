@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: var(--nav-background);
+    background-color: var(--nav-background-2);
     z-index: top;
     top: 0;
 

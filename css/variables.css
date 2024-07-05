@@ -22,7 +22,8 @@
     --header-margin-left: 7%;
 
     --nav-text-color: #ffffff;
-    --nav-background: #658bb9;
+    --nav-background: var(--primary-color);
+    --nav-background-2: var(--secondary-color-dark);
     /* --nav-background: #4771a4; */
     /* --nav-background: #4479b9; */
     --burger-color-light: #ffffff;

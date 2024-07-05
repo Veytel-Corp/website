@@ -193,6 +193,11 @@ nav .scrolling-nav-menu-btn-text {
 
 .revealed-scrolling-nav {
     top: 0 !important;
+    /* background-color: var(--nav-background-2) !important; */
+}
+
+.nav-background-2 {
+    background-color: var(--nav-background-2) !important;
 }
 
 @media only screen and (max-width: 1042px) {
@@ -241,7 +246,7 @@ nav .scrolling-nav-menu-btn-text {
         top: 0;
         height: var(--mobile-nav-height);
         align-items: center;
-        justify-content: space-between;
+        background-color: var(--nav-background-2) !important;
         padding: 0 7%;
     }
 
