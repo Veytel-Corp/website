@@ -97,6 +97,11 @@ video::-webkit-media-controls {
     width: fit-content;
 }
 
+.no-filter {
+    filter: none !important;
+    transition-duration: .2s;
+}
+
 label {
     font-family: var(--reg-font-family);
 }

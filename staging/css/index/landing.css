@@ -83,7 +83,7 @@ main {
 }
 
 .lm-btn {
-    background-color: var(--nav-background);
+    background-color: var(--nav-background-2);
     color: var(--light-text-color);
     /* background-color: white;
     color: black; */
@@ -92,13 +92,15 @@ main {
 }
 
 .cu-btn {
-    background-color: var(--light-background-color);
+    background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: .7rem 2.5rem;
 }
 
 
 .swoosh {
+    /* filter: hue-rotate(40deg) brightness(30%) saturate(200%); */
+    /* filter:; */
     position: fixed;
     z-index: 0;
     top: 0;

@@ -98,8 +98,7 @@ function disableScroll() {
         window.scrollX ||
         document.documentElement.scrollLeft,
 
-        // if any scroll is attempted,
-        // set this to the previous value
+        // if any scroll is attempted, set this to the saved value
         window.onscroll = function () {
             window.scrollTo(scrollLeft, scrollTop);
         };
@@ -113,6 +112,7 @@ async function toggleScrollingNav() {
     const pathname = window.location.pathname;
     if (window.scrollY === 0) {
         const scrollingNavEl = document.querySelector('.scrolling-nav');
+        const swooshEl = document.querySelector('.swoosh');
         if(!scrollingNavEl) return false;
             const introNavEl = document.querySelector('.intro-nav');
             const mainMenuEl = document.querySelector('.main-menu');
@@ -122,6 +122,8 @@ async function toggleScrollingNav() {
             }, 10)
             scrollingNavEl.classList.remove("revealed-scrolling-nav");
             scrollingNavEl.classList.remove("nav-background-2");
+            // swooshEl.classList.remove('no-filter');
+
     }
     if (pathname != "/contact.html" && isAtBottom()) {
         const scrollingNavEl = document.querySelector('.scrolling-nav');
@@ -180,6 +182,7 @@ const callback = (entries, observer) => {
             const scrollingNavEl = document.querySelector('.scrolling-nav');
             const introNavEl = document.querySelector('.intro-nav');
             const mainMenuEl = document.querySelector('.main-menu');
+            const swooshEl = document.querySelector('.swoosh');
             setTimeout(()=>{
                 introNavEl.classList.add('hidden');
                 mainMenuEl.classList.add('hidden');
@@ -187,6 +190,7 @@ const callback = (entries, observer) => {
             scrollingNavEl.classList.add("revealed-scrolling-nav");
             setTimeout(()=> {
                 scrollingNavEl.classList.add("nav-background-2");
+                // swooshEl.classList.add("no-filter");
             }, 200)
         }
     });
