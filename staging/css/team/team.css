@@ -1,3 +1,7 @@
+html {
+    background-color: #658bb9;
+}
+
 #team-header-background {
     padding-top: calc( 2 * var(--mobile-nav-height));
     display: flex;
@@ -114,7 +118,7 @@ main#team-main {
 
 @media only screen and (max-width: 916px) {
     #team-header-background {
-        padding-top: calc( 1.5 * var(--mobile-nav-height));
+        margin-top: var(--mobile-nav-height);
     }
 }
 
