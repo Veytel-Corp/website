@@ -23,13 +23,16 @@ html {
 }
 
 #team-landing-text-con h1 {
+    background-color: rgba(255, 255, 255, 0.5);
     font-family: var(--slab-font-family);
     margin-bottom: .5rem;
+    padding: 0 1rem;
     font-size: 5vw;
 }
 
 #team-landing-text-con .bottom-bar {
-    height: .3rem;
+    height: 1vw;
+    max-height: .3rem;
     background-color: #272727;
     border-radius: 15px;
     width: 50%;
@@ -125,11 +128,12 @@ main#team-main {
 @media only screen and (max-width: 916px) {
     #team-header-background {
         align-self: center;
-        background: linear-gradient(to top, var(--light-background-color) 30%, rgba(221, 114, 60, 0.8), rgba(252, 114, 1, 0.6), rgba(220, 182, 151, 1), rgba(155, 174, 158, 1), #658bb9);
+        /* background: linear-gradient(to top, var(--light-background-color) 30%, rgba(221, 114, 60, 0.8), rgba(252, 114, 1, 0.6), rgba(220, 182, 151, 1), rgba(155, 174, 158, 1), #658bb9); */
     }
     #team-header-background img {
         scale: 1.1;
         padding-right: 1rem;
+        margin-top: -4rem;
     }
 }
     
