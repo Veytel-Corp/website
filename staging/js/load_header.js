@@ -117,8 +117,8 @@ async function toggleScrollingNav() {
             const introNavEl = document.querySelector('.intro-nav');
             const mainMenuEl = document.querySelector('.main-menu');
             setTimeout(()=>{
-                introNavEl.classList.remove('hidden');
-                mainMenuEl.classList.remove('hidden');
+                introNavEl.classList.remove('hidden-inline');
+                mainMenuEl.classList.remove('hidden-inline');
             }, 10)
             scrollingNavEl.classList.remove("revealed-scrolling-nav");
             scrollingNavEl.classList.remove("nav-background-2");
@@ -184,8 +184,8 @@ const callback = (entries, observer) => {
             const mainMenuEl = document.querySelector('.main-menu');
             const swooshEl = document.querySelector('.swoosh');
             setTimeout(()=>{
-                introNavEl.classList.add('hidden');
-                mainMenuEl.classList.add('hidden');
+                introNavEl.classList.add('hidden-inline');
+                mainMenuEl.classList.add('hidden-inline');
             }, 10)
             scrollingNavEl.classList.add("revealed-scrolling-nav");
             setTimeout(()=> {
