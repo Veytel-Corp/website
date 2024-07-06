@@ -7,7 +7,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(to top, var(--light-background-color) 40%, rgba(221, 114, 60, 0.8), rgba(252, 114, 1, 0.6), rgba(220, 182, 151, 1), rgba(155, 174, 158, 1), #658bb9);
+    background:linear-gradient(to top, var(--light-background-color) 40%, rgba(255, 96, 17, 0.7), rgba(252, 114, 1, 0.7), rgba(220, 182, 151, 1), rgb(143, 189, 150), #658bb9);
     position: relative;
 }
 
