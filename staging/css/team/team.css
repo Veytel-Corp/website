@@ -23,7 +23,6 @@ html {
 }
 
 #team-landing-text-con h1 {
-    background-color: rgba(255, 255, 255, 0.5);
     font-family: var(--slab-font-family);
     margin-bottom: .5rem;
     padding: 0 1rem;
