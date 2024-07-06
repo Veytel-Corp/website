@@ -21,7 +21,7 @@
 #team-landing-text-con h1 {
     font-family: var(--slab-font-family);
     margin-bottom: .5rem;
-    font-size: 5rem;
+    font-size: 5vw;
 }
 
 #team-landing-text-con .bottom-bar {
@@ -115,6 +115,17 @@ main#team-main {
 @media only screen and (max-width: 916px) {
     #team-header-background {
         padding-top: calc( 1.5 * var(--mobile-nav-height));
+    }
+}
+
+@media only screen and (max-width: 916px) {
+    #team-header-background {
+        align-self: center;
+        background: linear-gradient(to top, var(--light-background-color) 30%, rgba(221, 114, 60, 0.8), rgba(252, 114, 1, 0.6), rgba(220, 182, 151, 1), rgba(155, 174, 158, 1), #658bb9);
+    }
+    #team-header-background img {
+        scale: 1.1;
+        padding-right: 1rem;
     }
 }
     
