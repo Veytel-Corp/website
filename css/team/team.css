@@ -2,13 +2,39 @@ html {
     background-color: #658bb9;
 }
 
-#team-header-background {
+#team-title-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 25vw;
+    z-index: 10;
+
+}
+#team-title-con h1 {
+    font-family: var(--slab-font-family);
+    margin-bottom: .5rem;
+    padding: 0 1rem;
+    font-size: 5vw;
+}
+#team-title-con .bottom-bar {
+    height: 1vw;
+    max-height: .3rem;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    width: 50%;
+}
+
+#team-hero-background {
     padding-top: calc( 2 * var(--mobile-nav-height));
     display: flex;
     justify-content: center;
     align-items: center;
     background:linear-gradient(to top, var(--light-background-color) 40%, rgb(255, 150, 97), rgb(255, 165, 91), rgba(220, 182, 151, 1), rgb(143, 189, 150), #658bb9);
     position: relative;
+    will-change: transform;
 }
 
 #team-landing-text-con {
@@ -20,21 +46,6 @@ html {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-}
-
-#team-landing-text-con h1 {
-    font-family: var(--slab-font-family);
-    margin-bottom: .5rem;
-    padding: 0 1rem;
-    font-size: 5vw;
-}
-
-#team-landing-text-con .bottom-bar {
-    height: 1vw;
-    max-height: .3rem;
-    background-color: #272727;
-    border-radius: 15px;
-    width: 50%;
 }
 
 main#team-main {
@@ -119,17 +130,17 @@ main#team-main {
 }
 
 @media only screen and (max-width: 916px) {
-    #team-header-background {
+    #team-hero-background {
         margin-top: var(--mobile-nav-height);
     }
 }
 
 @media only screen and (max-width: 916px) {
-    #team-header-background {
+    #team-hero-background {
         align-self: center;
         /* background: linear-gradient(to top, var(--light-background-color) 30%, rgba(221, 114, 60, 0.8), rgba(252, 114, 1, 0.6), rgba(220, 182, 151, 1), rgba(155, 174, 158, 1), #658bb9); */
     }
-    #team-header-background img {
+    #team-hero-background img {
         scale: 1.05;
         padding-right: 1rem;
         margin-top: -4rem;
