@@ -35,3 +35,33 @@ formEl.addEventListener('submit', async (e)=> {
             // errorEl.classList.remove('hidden');
         }
 });
+
+// const textAreaEl = document.getElementById("message");
+// const wordCountEl = document.getElementById("wordcount");
+
+// const textCounter = {
+//     wordcount: 0,
+//     prevText: textAreaEl.value
+// }
+// textCounter.updateCounter = updateCounter = () => {
+//     const textAreaEl = document.getElementById("message");
+//     if (textCounter.wordcount >= 100) {
+//         document.getElementById("message").value = textCounter.prevText;
+//         return;
+//     }
+//     textCounter.prevText = textAreaEl.value;
+//     const text = textAreaEl.value;
+
+//     const whiteSpace = new RegExp(/\s+/);
+//     const splitText = text.split(whiteSpace);
+//     let wordCount = splitText.length;
+//     if (splitText[wordCount - 1] == '') wordCount -= 1;
+//     textCounter.wordcount = wordCount;
+//     wordCountEl.innerText = `Word Count: ${wordCount}/100`;
+//     return;
+
+// }
+
+// document.addEventListener("DOMContentLoaded", textCounter.updateCounter);
+// textAreaEl.addEventListener('input', textCounter.updateCounter);
+
