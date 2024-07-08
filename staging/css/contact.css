@@ -60,6 +60,11 @@ form textarea {
   min-width: 100%;
 }
 
+form #wordcount {
+  font-size: 1.3rem;
+  color: gray;
+}
+
 form input:focus,
 form textarea:focus {
   background-color: var(--secondary-light-color);
