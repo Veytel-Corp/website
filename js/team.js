@@ -1,34 +1,55 @@
 (function env() {
-
-
-    const isActive = {
-        doEffect: true,
-        threshold: NaN
-    }
-
-    isActive.toggle = function toggle() {
-        if (!isActive.doEffect && window.scrollY > isActive.threshold) return;
-        if (window.scrollY == 0) {
-            isActive.doEffect = true;
-            return;
+    const teamMembers = [
+        {
+            name: "test",
+            title: "this card is created dynamically",
+            src: "./assets/images/temp/aidan.jpg"
         }
-        isActive.doEffect = !isActive.doEffect;
-    }
+    ] 
 
-    const observer = new IntersectionObserver(isActive.toggle, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0
-    });
+    const populateTeamMembers = (() => {
+        const mainEl = document.getElementById('team-main')
+        teamMembers.forEach((member) => {
+            // Create child elements
+            const memberConEl = document.createElement('div');
+            const imgConEl = document.createElement('div');
+            const nameConEl = document.createElement('div');
+            const titleConEl = document.createElement('div');
+            const imgEl = document.createElement('img');
 
-    function parallaxEffect(element, speedFactor = 0.5) {        
+            // Assign classes
+            memberConEl.classList.add('member-con');
+            imgConEl.classList.add('team-img-con');
+            nameConEl.classList.add('team-member-name-con');
+            titleConEl.classList.add('team-member-title-con');
+
+            // Set image attributes
+            // imgEl.width = "100%";
+            imgEl.src = member.src;
+
+            // Append child elements
+            memberConEl.appendChild(imgConEl);
+            memberConEl.appendChild(nameConEl);
+            memberConEl.appendChild(titleConEl);
+            imgConEl.appendChild(imgEl);
+            imgConEl.appendChild(imgEl);
+
+            // Set name and title
+            nameConEl.innerHTML = `<h2>${member.name}</h2>`;
+            titleConEl.innerHTML = `<h3>${member.title}</h3>`;
+            
+            // Append new team member to main element.
+            mainEl.appendChild(memberConEl);
+        });
+
+    })//()
+    const parallaxEffect = (element, speedFactor = 0.5) => {        
         if (!element) return;
 
         let lastScrollY = window.scrollY;
         let ticking = false;
 
         function onScroll() {
-            if (!isActive.doEffect) return;
             lastScrollY = window.scrollY;
             if (!ticking) {
                 window.requestAnimationFrame(updateParallax);
@@ -43,10 +64,8 @@
 
         window.addEventListener('scroll', onScroll);
     }
-
     document.addEventListener('DOMContentLoaded', () => {
         const pittsburghEl = document.querySelector('#team-hero-background');
-        observer.observe(pittsburghEl);
         parallaxEffect(pittsburghEl, 0.15);
     });
 

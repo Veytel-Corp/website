@@ -91,6 +91,7 @@ main#team-main::before {
 }
 
 .team-img-con img {
+    width: 100%;
     filter: blur(15px);
 }
 
