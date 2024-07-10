@@ -1,6 +1,5 @@
 html {
     background-color: #658bb9;
-    /* background-color: #4975A2; */
 }
 
 #team-title-con {
@@ -59,13 +58,24 @@ html {
 main#team-main {
     background-color: var(--light-background-color);
     padding: 5% 10%;
-    /* padding-top: 1rem; */
     width: 100%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     gap: 2%;
     flex-wrap: wrap;
+    position: relative;
     
+}
+main#team-main::before {
+    content: "";
+    position: absolute;
+    top: -12rem;
+    left: 0;
+    right: 0;
+    height: 12rem;
+    background: linear-gradient(to bottom, transparent, var(--light-background-color));
+    pointer-events: none;
+    z-index: 1;
 }
 
 .member-con {
@@ -137,21 +147,23 @@ main#team-main {
     transition-duration: .8s;
 }
 
-@media only screen and (max-width: 916px) {
-    #team-hero-background {
-        /* margin-top: var(--mobile-nav-height); */
-    }
-}
+@media only screen and (max-width: 620px) {
 
-@media only screen and (max-width: 916px) {
-    #team-hero-background {
-        align-self: center;
-        /* background: linear-gradient(to top, var(--light-background-color) 30%, rgba(221, 114, 60, 0.8), rgba(252, 114, 1, 0.6), rgba(220, 182, 151, 1), rgba(155, 174, 158, 1), #658bb9); */
+    .member-con:not(:last-child) {
+        margin-bottom: 7%;
     }
-    #team-hero-background img {
-        /* scale: 1.05;
-        padding-right: 1rem; */
-        /* margin-top: -4rem; */
+    .member-con .team-member-name-con {
+        bottom: 30%;
+        transition-duration: 0s;
+    }
+    
+    .member-con .team-member-name-con h2 {
+        bottom: 0;
+        transition-duration: 0s !important;
+    }
+
+    .member-con:hover .team-member-name-con h2 {
+        bottom: 0;
     }
 }
     
