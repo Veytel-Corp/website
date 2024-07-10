@@ -13,7 +13,6 @@ formEl.addEventListener('submit', async (e)=> {
         const formObject = Object.fromEntries(formData.entries());
 
         try {
-            // const requestURL = "https://script.google.com/macros/s/AKfycbyWLGWbuyX_AXNWlYqCo6CLBTRhPBR1jrUlYFadbEgn066m-gF5lgDQmFZEr_3y7GYrRw/exec";
             const requestURL = "https://script.google.com/macros/s/AKfycby22ij9ioLxPK8tXGpKyJy5j_eqDyXHpoDZPVpLMv7XtRvT7WjqZ88sY_Uyw539Ygzl/exec";
             loaderEl.classList.remove('hidden');
             const response = await fetch(requestURL, {
@@ -32,36 +31,58 @@ formEl.addEventListener('submit', async (e)=> {
             console.error(err);
             loaderEl.classList.add('hidden');
             somethingWentWrongEl.classList.remove('hidden');
-            // errorEl.classList.remove('hidden');
         }
 });
 
-// const textAreaEl = document.getElementById("message");
-// const wordCountEl = document.getElementById("wordcount");
+const textAreaEl = document.getElementById("message");
+const charCountEl = document.getElementById("char-count");
 
-// const textCounter = {
-//     wordcount: 0,
-//     prevText: textAreaEl.value
-// }
-// textCounter.updateCounter = updateCounter = () => {
-//     const textAreaEl = document.getElementById("message");
-//     if (textCounter.wordcount >= 100) {
-//         document.getElementById("message").value = textCounter.prevText;
-//         return;
-//     }
-//     textCounter.prevText = textAreaEl.value;
-//     const text = textAreaEl.value;
+const charCounter = {
+    count: 0,
+    maxCount: 800
+}
+charCounter.setCharCount = (count = false) => {
+    if (Number.isInteger*(count)) {
+        charCounter.count = count;
+    }
+    else {
+        charCounter.count = textAreaEl.value.length;
+    }
+}
+charCounter.updateDOM = (toMax = false) => {
+    if (toMax) {
+        const text = textAreaEl.value;
+        textAreaEl.value = text.substring(0, charCounter.maxCount);
+        charCounter.setCharCount(charCounter.maxCount);
+        charCounter.updateDOM();
+        return true;
+    }
+    charCountEl.innerText = `Character Count: ${charCounter.count}/${charCounter.maxCount}`;
+    return true;
+}
+charCounter.isMax = () => {
+    if (charCounter.count >= charCounter.maxCount) {
+        charCounter.updateDOM(true);
+        return true;
+    }
+    return false;
+}
 
-//     const whiteSpace = new RegExp(/\s+/);
-//     const splitText = text.split(whiteSpace);
-//     let wordCount = splitText.length;
-//     if (splitText[wordCount - 1] == '') wordCount -= 1;
-//     textCounter.wordcount = wordCount;
-//     wordCountEl.innerText = `Word Count: ${wordCount}/100`;
-//     return;
+document.addEventListener("DOMContentLoaded", () => {
+    charCounter.setCharCount();
+    charCounter.updateDOM();
+});
 
-// }
-
-// document.addEventListener("DOMContentLoaded", textCounter.updateCounter);
-// textAreaEl.addEventListener('input', textCounter.updateCounter);
+textAreaEl.addEventListener('input', ()=> {
+    charCounter.setCharCount();
+    charCounter.updateDOM();
+    if (charCounter.isMax()) {
+        charCounter.setTextAreaToMax();
+    }
+})
+textAreaEl.addEventListener('beforeinput', (e) => {
+    if (charCounter.isMax() && e.inputType === 'insertText') {
+        e.preventDefault();
+    }
+});
 

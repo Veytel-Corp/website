@@ -60,7 +60,7 @@ form textarea {
   min-width: 100%;
 }
 
-form #wordcount {
+form #char-count {
   font-size: 1.3rem;
   color: gray;
 }
