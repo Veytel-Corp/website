@@ -107,6 +107,15 @@ nav.intro-nav ul li a {
     left: 0;
 }
 
+.dark-header .main-menu ul li a:hover {
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.dark-header .main-menu ul li a {
+    color: var(--primary-color);
+}
+
 .spacer-bar-vert {
     background-color: var(--primary-color);
     height: 2.3rem;

@@ -53,7 +53,12 @@ h2 {
 }
 
 h3 {
+    font-family: var(--reg-font-family);
     font-size: var(--h3-font-size-pc);
+}
+
+span {
+    font-family: var(--reg-font-family);
 }
 
 p {
