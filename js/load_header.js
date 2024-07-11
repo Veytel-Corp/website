@@ -22,6 +22,14 @@
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
 
+            if (headerEl.classList.contains('dark-header')) {
+                const logos = headerEl.querySelectorAll('.main-logo');
+                logos.forEach((logo) => {
+                    logo.src = "./assets/svg/logos/logo_dark.svg"
+                });
+                headerEl.querySelector('.scrolling-nav').style = 'background-color: white !important; border-bottom: .2rem solid var(--primary-color)';
+            }
+
             const toLandingElements = document.querySelectorAll('a[href*="#landing"]');
 
             toLandingElements.forEach((el)=> {
@@ -108,10 +116,18 @@ function enableScroll() {
     window.onscroll = function () { };
 }
 
+function isPageVerticallyScrollable() {
+    return document.documentElement.scrollHeight > window.innerHeight;
+}
+
 async function toggleScrollingNav() {
-    const pathname = window.location.pathname;
+    const scrollingNavEl = document.querySelector('.scrolling-nav');
+    if (!isPageVerticallyScrollable() && !isWidthLessThan(768)) {
+        scrollingNavEl.classList.add('hidden');
+        return;
+    }
     if (window.scrollY === 0) {
-        const scrollingNavEl = document.querySelector('.scrolling-nav');
+        
         const swooshEl = document.querySelector('.swoosh');
         if(!scrollingNavEl) return false;
             const introNavEl = document.querySelector('.intro-nav');
@@ -125,16 +141,9 @@ async function toggleScrollingNav() {
             // swooshEl.classList.remove('no-filter');
 
     }
-    if (pathname != "/contact.html" && isAtBottom()) {
-        const scrollingNavEl = document.querySelector('.scrolling-nav');
-        if(!scrollingNavEl || isWidthLessThan(768)) return false;
-        scrollingNavEl.classList.add('hidden');
-    }
-    else {
-        const scrollingNavEl = document.querySelector('.scrolling-nav');
         if(!scrollingNavEl) return false;
         scrollingNavEl.classList.remove('hidden')
-    }
+    // }
 }
 function setPlaceholderHeight() {
     
