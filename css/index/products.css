@@ -156,6 +156,124 @@
     z-index: 1;
 }
 
+.request-demo-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    background-color: rgba(189, 211, 246, 0.5);
+    /* backdrop-filter: blur(5px); */
+}
+
+
+.request-demo-form {
+    width: 60%;
+    height: fit-content;
+    padding: 1rem 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: black solid .2rem;
+    border-radius: .7rem;
+    background-color: lightgray;
+    position: relative;
+}
+
+.request-demo-success, .request-demo-fail {
+    width: 60%;
+    height: fit-content;
+    padding: 1rem 3rem;
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: black solid .2rem;
+    border-radius: .7rem;
+    background-color: white;
+    position: relative;
+}
+
+.request-demo-fail h1 {
+    color: var(--error)
+}
+
+#close-request-demo-modal-btn {
+    cursor: pointer;
+}
+
+.request-demo-form h3 {
+    font-size: 2rem;
+}
+
+.request-demo-form input#email {
+    width: 75%;
+    height: 4rem;
+    border: solid black .1rem;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+}
+
+#close-request-demo-modal-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.request-demo-form button[type="submit"] {
+    width: fit-content;
+    padding: .5rem 1rem;
+    background-color: var(--secondary-color-dark);
+    border: solid black .1rem;
+    border-radius: .7rem;
+    font-family: var(--reg-font-family);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.request-demo-form button[type="submit"]:hover {
+    scale: 1.1;
+    filter: brightness(1.1);
+}
+
+.request-demo-form button[type="submit"] img.send-icon {
+    rotate: -35deg;
+    transform: translateY(-.1rem);
+}
+
+.exit-btn {
+    background-color: white;
+    color: var(--error);
+    border: solid black .1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 25%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
 @media only screen and (max-width: 1200px) {
     .product-content-con img {
         width: 47%;
