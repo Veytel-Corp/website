@@ -25,6 +25,31 @@
 <body>
   <div class="learn-more-modal hidden"></div>
   <div class="about-modal hidden"></div>
+  <div class="request-demo-modal hidden">
+    <form class="request-demo-form" method="POST" action="">
+      <img class="close-request-demo-modal" id="close-request-demo-modal-btn" src="./assets/svg/x_dark.svg" alt="close modal"/>
+      <input class="hidden" name="name" id="name" type="text" placeholder="Your Name" >
+      <h3>Enter Your Email</h3>
+      <input name="email" id="email" type="email" class="form-control" placeholder="example@email.com..." required>
+      <textarea class="hidden" name="message" id="message" placeholder="Message" row=4  ></textarea>
+      <br>
+      <button type="submit">
+        <img class="send-icon" src="./assets/svg/send.svg" alt="send message icon"/> Send Request
+      </button>
+    </form>
+    <div class="request-demo-success hidden">
+      <h1>Request Sent</h1>
+      <h2>Your request was sent successfully. A team member will reach out to you soon.</h2>
+    </div>
+    <div class="request-demo-fail hidden">
+      <h1>Request Failed</h1>
+      <h2>Something went wrong when sending your message. Plase try again.</h2>
+    </div>
+    <button class="hidden exit-btn close-request-demo-modal">Exit</button>
+  </div>
+  <div class="loader-con hidden">
+    <div class="loader"></div>
+  </div>
   <header>
   </header>
   <section class="landing" id="landing">
@@ -166,6 +191,7 @@
   <script src="./js/testimonials.js"></script>
   <script src="./js/modals/learn_more.js"></script>
   <script src="./js/modals/about.js"></script>
+  <script src="./js/index/products.js"></script>
 </body>
 
 </html>
