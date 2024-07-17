@@ -1,15 +1,31 @@
 const formEl = document.querySelector('.request-demo-form'); 
 const thankYouEl = document.querySelector('.request-demo-success');
 const somethingWentWrongEl = document.querySelector('.request-demo-fail');
-const closeReqDemModalElements = document.querySelectorAll('.close-request-demo-modal');
 const loaderEl = document.querySelector('.loader-con');
 const exitModalEl = document.querySelector('.exit-btn');
 
+const closeReqDemModalElements = document.querySelectorAll('.close-request-demo-modal');
 const productButtons = document.querySelectorAll('.product-button-con');
+const discoverMoreButtons = document.querySelectorAll('.discover-more-button');
+
+// DISCOVER MORE
+discoverMoreButtons.forEach((btn) => {
+    const productName = btn.parentElement.dataset.productname;
+    btn.addEventListener('click', ()=> {
+        sendToProductsPage(productName);
+    });
+})
+
+function sendToProductsPage(productName) {
+    window.location.assign(`/products.html?productname=${productName}`);
+}
+
+// REQUEST DEMO
 const productInfo = {
     productName: "",
 }
 
+// Handle form submit
 formEl.addEventListener('submit', async (e)=> {
     e.preventDefault();
 
@@ -50,19 +66,24 @@ productButtons.forEach((con) => {
         toggleRequestDemoModal();
     })
 });
+
+// Attach event listener to close the modal whenever the element is clicked.
+// Calls resetRequestDemoModal
 closeReqDemModalElements.forEach((btn)=> {
     btn.addEventListener('click', resetRequestDemoModal);
 });
 
+// Toggles hidden class from request demo modal
 function toggleRequestDemoModal() {
     document.querySelector('.request-demo-modal').classList.toggle('hidden');
 }
 
+// Hides anything that should be hidden, resets form, calls toggleRequestDemoModal
 function resetRequestDemoModal() {
     if (!exitModalEl.classList.contains('hidden')) exitModalEl.classList.add('hidden');
     if (!thankYouEl.classList.contains('hidden')) thankYouEl.classList.add('hidden');
     if (!somethingWentWrongEl.classList.contains('hidden')) somethingWentWrongEl.classList.add('hidden');
     formEl.classList.remove('hidden');
-    console.log(formEl);
+    formEl.reset();
     toggleRequestDemoModal();
 }
