@@ -1,69 +1,105 @@
-const products = [
-    {
-        name: "DERMA-AI",
-        quickDescription: "Melanoma Assessment for Early Detection",
-        market: "Dermatology",
-        impact: "70% increase in detecting changed skin lesions, the most telling sign of Melanoma",
-        description: "Technical information describing use of metrics... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-    },
-    {
-        name: "PULSAR-AI",
-        quickDescription: "PULSAR-AI",
-        market: "PULSAR-AI",
-        impact: "PULSAR-AI",
-        description: "PULSAR-AI"
-    },
-    {
-        name: "PHARMA-AI",
-        quickDescription: "PHARMA-AI",
-        market: "PHARMA-AI",
-        impact: "PHARMA-AI",
-        description: "PHARMA-AI"
-    },
-];
+const productEngin = {
+    products: [
+        {
+            name: "DERMA-AI",
+            quickDescription: "Melanoma Assessment for Early Detection",
+            market: "Dermatology",
+            impact: "70% increase in detecting changed skin lesions, the most telling sign of Melanoma",
+            description: "Technical information describing use of metrics... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        },
+        {
+            name: "PULSAR-AI",
+            quickDescription: "PULSAR-AI",
+            market: "PULSAR-AI",
+            impact: "PULSAR-AI",
+            description: "PULSAR-AI"
+        },
+        {
+            name: "PHARMA-AI",
+            quickDescription: "PHARMA-AI",
+            market: "PHARMA-AI",
+            impact: "PHARMA-AI",
+            description: "PHARMA-AI"
+        },
+    ],
+    activeProduct: "DERMA-AI",
+}
 
-const heroNavEl = document.getElementById('hero-nav');
-Array.from(heroNavEl.childNodes).forEach((element) => {
-    element.addEventListener('click', setActive);
-});
+productEngin.getActiveProductFromURL = () => {
+    const urlParamsString = window.location.search; 
+    const urlParams = new URLSearchParams(urlParamsString);
+    const activeProductName = urlParams.get('productname');
+    return activeProductName;
+}
 
-function setActive(e) {
-    const element = e.target;
-    if (element.classList.contains('underline-focus')) return;
+productEngin.setActiveProduct = (product) => {
+    productEngin.activeProduct = product;
+}
 
-    const prevActiveEl = document.querySelector('.underline-focus');
-    console.log(prevActiveEl);
-    prevActiveEl.classList.remove('underline-focus');
-
-    element.classList.add('underline-focus')
-
-    const productName = element.dataset.productname;
-
-    const productInfo = products.filter((product) => {
-        return product.name === productName;
+productEngin.getActiveProductInfo = () => {
+    const productInfo = productEngin.products.filter((product) => {
+        return product.name === productEngin.activeProduct;
     })[0];
+    return productInfo;
+}
 
-    console.log(productInfo);
+productEngin.updateDOM = () => {
+    const prevActiveEl = document.querySelector('.underline-focus');
+    const activeNavEl = document.querySelector(`li[data-productname="${productEngin.activeProduct}"]`);
+    const focusClass = 'underline-focus';
+    // Selected product is alreadt focused so return.
+    if (activeNavEl.classList.contains(focusClass)) return;
 
+    // Update product nav
+    prevActiveEl.classList.remove(focusClass);
+    activeNavEl.classList.add(focusClass);
 
+    // Get active product info
+    const activeProductInfo = productEngin.getActiveProductInfo(); 
+
+    // Elements to be updated
+    // Hero Banner
     const heroBannerEl = document.querySelector('.hero-banner');
-    const productsMainEl = document.getElementById('products-main');
-
     const nameEl = heroBannerEl.querySelector('h1');
     const quickDescriptionEl = heroBannerEl.querySelector('h2');
-
-    nameEl.innerText = productInfo.name;
-    quickDescriptionEl.innerText = productInfo.quickDescription;
-
-    
+    // Main Product Description
+    const productsMainEl = document.getElementById('products-main');
     const marketEl = productsMainEl.querySelector('#market-con').querySelector('p');
     const impactEl = productsMainEl.querySelector('#impact-con').querySelector('p');
     const descriptionEl = productsMainEl.querySelector('#description-con').querySelector('p');
 
-    marketEl.innerText = productInfo.market;
-    impactEl.innerText = productInfo.impact;
-    descriptionEl.innerText = productInfo.description;
-
-
+    // Update element content
+    //Hero Banner
+    nameEl.innerText = activeProductInfo.name;
+    quickDescriptionEl.innerText = activeProductInfo.quickDescription;
+    // Main Product Description
+    marketEl.innerText = activeProductInfo.market;
+    impactEl.innerText = activeProductInfo.impact;
+    descriptionEl.innerText = activeProductInfo.description;
 }
+
+productEngin.updateURL = () => {
+    const url = new URL(window.location);
+    url.searchParams.set('productname', productEngin.activeProduct);
+    history.replaceState(null, '', url);
+}
+
+const heroNavEl = document.getElementById('hero-nav');
+Array.from(heroNavEl.childNodes).forEach((li) => {
+    li.addEventListener('click', (e) => {
+        const element = e.target;
+        const productName = element.dataset.productname;
+        console.log(productName);
+        productEngin.setActiveProduct(productName);
+        productEngin.updateDOM();
+        productEngin.updateURL();
+    });
+});
+
+window.addEventListener('DOMContentLoaded', ()=> {
+    const productName = productEngin.getActiveProductFromURL();
+    productEngin.setActiveProduct(productName);
+    productEngin.updateDOM();
+    
+})
 

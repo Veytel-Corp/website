@@ -176,7 +176,7 @@
 .request-demo-form {
     width: 60%;
     height: fit-content;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -186,6 +186,7 @@
     border-radius: .7rem;
     background-color: lightgray;
     position: relative;
+    text-align: center;
 }
 
 .request-demo-success, .request-demo-fail {
