@@ -100,7 +100,7 @@ main#team-main::before {
 .team-member-name-con {
     width: 100%;
     height: fit-content;
-    min-height: 15%;
+    /* min-height: 30%; */
     padding: 1rem 0;
     background: rgb(29,0,84);
     background: linear-gradient(0deg, rgba(29,0,84,1) 25%, rgba(189,211,246,0) 100%); 
@@ -126,6 +126,7 @@ main#team-main::before {
 .team-member-name-con h2, .team-member-title-con h3 {
     color: var(--lightest-color);
     font-family: var(--reg-font-family);
+    text-align: center;
 }
 
 .team-member-name-con h2 {
@@ -143,6 +144,7 @@ main#team-main::before {
 
 .member-con:hover .team-member-name-con {
     bottom: 30%;
+    height: 30%;
 }
 
 .member-con:hover .team-member-name-con h2 {
