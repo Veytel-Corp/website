@@ -24,25 +24,21 @@ const productEngin = {
     ],
     activeProduct: "DERMA-AI",
 }
-
 productEngin.getActiveProductFromURL = () => {
     const urlParamsString = window.location.search; 
     const urlParams = new URLSearchParams(urlParamsString);
     const activeProductName = urlParams.get('productname');
     return activeProductName;
 }
-
 productEngin.setActiveProduct = (product) => {
     productEngin.activeProduct = product;
 }
-
 productEngin.getActiveProductInfo = () => {
     const productInfo = productEngin.products.filter((product) => {
         return product.name === productEngin.activeProduct;
     })[0];
     return productInfo;
 }
-
 productEngin.updateDOM = () => {
     const prevActiveEl = document.querySelector('.underline-focus');
     const activeNavEl = document.querySelector(`li[data-productname="${productEngin.activeProduct}"]`);
@@ -77,7 +73,6 @@ productEngin.updateDOM = () => {
     impactEl.innerText = activeProductInfo.impact;
     descriptionEl.innerText = activeProductInfo.description;
 }
-
 productEngin.updateURL = () => {
     const url = new URL(window.location);
     url.searchParams.set('productname', productEngin.activeProduct);
@@ -100,6 +95,5 @@ window.addEventListener('DOMContentLoaded', ()=> {
     const productName = productEngin.getActiveProductFromURL();
     productEngin.setActiveProduct(productName);
     productEngin.updateDOM();
-    
 })
 
