@@ -190,9 +190,9 @@
 }
 
 .request-demo-success, .request-demo-fail {
-    width: 60%;
+    width: 80%;
     height: fit-content;
-    padding: 1rem 3rem;
+    padding: 7%;
     display: flex;
     text-align: center;
     gap: 1rem;
@@ -333,6 +333,15 @@
 }
 
 @media only screen and (max-width: 538px) {
+    .request-demo-success, .request-demo-fail {
+        width: 100%;
+        border-right: none;
+        border-left: none;
+        border-radius: 0;
+    }
+    .exit-btn {
+        width: 50%;
+    }
 
     .product-button-con {
         flex-direction: column;
