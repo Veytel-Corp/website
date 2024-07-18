@@ -176,7 +176,7 @@
 .request-demo-form {
     width: 60%;
     height: fit-content;
-    padding: 2rem 3rem;
+    padding: 4rem 3rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -318,6 +318,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .request-demo-form {
+        width: 100%;
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+    }
 }
 
 @media only screen and (max-width: 620px) {
