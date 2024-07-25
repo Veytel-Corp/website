@@ -26,9 +26,22 @@ main {
 #landing video {
     width: 100%;
     height: auto;
-    /* z-index: -10; */
-    top: 0;
     filter:brightness(75%)
+}
+
+.slide {
+    transition-duration: 1s;
+}
+.current-slide {
+    opacity: 1 !important;
+    /* transition-duration: 1s; */
+}
+.next-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0 !important;
+    /* transition-duration: 1s; */
 }
 
 .intro-con {
