@@ -144,7 +144,7 @@ main#team-main::before {
 
 .member-con:hover .team-member-name-con {
     bottom: 30%;
-    height: 30%;
+    height: 20%;
 }
 
 .member-con:hover .team-member-name-con h2 {
@@ -158,16 +158,17 @@ main#team-main::before {
     }
     .member-con .team-member-name-con {
         bottom: 30%;
+        height: 20%;
         transition-duration: 0s;
     }
     
     .member-con .team-member-name-con h2 {
-        bottom: 0;
+        bottom: 1rem;
         transition-duration: 0s !important;
     }
 
-    .member-con:hover .team-member-name-con h2 {
+    /* .member-con:hover .team-member-name-con h2 {
         bottom: 0;
-    }
+    } */
 }
     

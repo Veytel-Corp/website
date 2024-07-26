@@ -19,18 +19,18 @@ class TeamMember {
 
 const teamPageManager = {
     teamMembers: [
-        new TeamMember('Ellen', 'Hughes', 'CEO & CTO', 'temp'),
-        new TeamMember('Paul', 'Haley', 'Chief Engineer', 'temp'),
-        new TeamMember('Mike', 'Hoffelder', 'Director of Autonomy', 'temp'),
-        new TeamMember('Kevin', 'Mitchell', 'Director of Data Science & AI', 'temp'),
-        new TeamMember('Cathy', 'Dietz', 'Director of Computer Vision', 'temp'),
-        new TeamMember('Robin', 'Joyce', 'Data Science Manager', 'temp'),
-        new TeamMember('Song', 'Xiang', 'Director of Marketing & Strategy', 'temp'),
-        new TeamMember('Lisa', 'Squillante', 'Director of Capital Investment & Sales', 'temp'),
-        new TeamMember('David', 'Keefer', 'President & Director of Business Operations', 'temp'),
+        new TeamMember('Ellen', 'Hughes', 'CEO & CTO', 'v1722015829/ellen_sqevfc'),
+        new TeamMember('Paul', 'Haley', 'Chief Engineer', 'v1722016251/paul_va8tmj'),
+        new TeamMember('Mike', 'Hoffelder', 'Director of Autonomy', 'v1722015825/teamPhoto2_lebc7b'),
+        new TeamMember('Kevin', 'Mitchell', 'Director of Data Science & AI', 'v1722015828/kevin_wg77l5'),
+        new TeamMember('Cathy', 'Dietz', 'Director of Computer Vision', 'v1722015819/cathy_b92qkk'),
+        new TeamMember('Robin', 'Joyce', 'Data Science Manager', 'v1722015829/roin_ih6adv'),
+        new TeamMember('Song', 'Xiang', 'Director of Marketing & Strategy', 'v1722015828/song_yaq4jz'),
+        new TeamMember('Lisa', 'Squillante', 'Director of Capital Investment & Sales', 'v1722015829/teamPhoto_kjiux5'),
+        new TeamMember('David', 'Keefer', 'President & Director of Business Operations', 'v1722015827/teamPhoto3_u15iyi'),
         new TeamMember('Swathi', 'Parvathaneni', 'Information Systems Manager', 'v1721242459/SwathiParvathaneni_i188h3'),
         new TeamMember('Anrey', 'Peng', 'Software & AI Engineer', 'v1721239415/AnreyPeng_gtvkga'),
-        new TeamMember('Aidan', 'Meyer', 'Software Engineer Intern', 'temp'),
+        new TeamMember('Aidan', 'Meyer', 'Software Engineer Intern', 'v1722016250/aidan_efldjr'),
     ],
 }
 teamPageManager.createMemberElement = (tm) => {

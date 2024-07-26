@@ -11,11 +11,6 @@ const slides = {
       duration: 6.5,
       mirror: true,
     },
-    // {
-    //   src: 'v1721930980/derma_demo_gfdb5s',
-    //   duration: 10,
-    // mirror: false,
-    // },
     {
       src: 'v1721885691/video3backup_j7ryry',
       duration: 6.5,
@@ -72,7 +67,7 @@ slides.setNextSlideAttributes = () => {
     nextSlideEl.load();
   }, 1500)
 }
-slides.nextSlide = () => {
+slides.nextSlide = async () => {
   const vsi = slides.visibleSlideIndex;
   const nsi = slides.nextSlideIndex;
   slides.visibleSlideIndex = slides.properties.length - 1 <= vsi ? 0 : vsi + 1;
@@ -95,11 +90,10 @@ slides.nextSlide = () => {
 // slides.initializeCurrentSlideElement();
 slides.initializeNextSlideElement();
 
-const scheduleNextSlide = () => {
-  let time = slides.properties[slides.visibleSlideIndex].duration * 1000;
+const scheduleNextSlide = (time = slides.properties[slides.visibleSlideIndex].duration * 1000) => {
   setTimeout(() => {
     slides.nextSlide();
   }, time);
 }
 
-scheduleNextSlide();
+scheduleNextSlide(2500);
