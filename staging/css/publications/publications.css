@@ -1,7 +1,7 @@
 /* @import url("./variables.css"); */
 
 .pub-main {
-    margin-top: 10rem;
+    margin-top: 13rem;
     display: flex;
     position: relative;
 }
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     padding: 7%;
-    padding-top: 5rem;
+    padding-top: 8vw;
     z-index: 10;
     border: solid var(--primary-color) .2rem;
     border-left: none;
@@ -87,7 +87,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
-    padding-top: 8vw;
+    padding: 8vw 0;
     z-index: 10;
 }
 .journals-con img {
@@ -117,14 +117,20 @@
 @media only screen and (max-width: 800px)  {
     .pub-main {
         flex-direction: column;
+        margin-top: 10rem;
     }
     .pub-content-con {
         width: 100%;
         border-right: none;
+        padding-top: 5rem;
     }
 
     .journals-con {
         width: 100%;
+        gap: 3rem;
+    }
+    .journals-con img {
+        width: 86%
     }
 }
 
