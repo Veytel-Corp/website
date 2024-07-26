@@ -1,21 +1,25 @@
-let c = 0;
+let c=0;
 const slides = {
   properties: [
     {
       src: 'v1718147146/adpruytnsaiyihndr2e1',
       duration: 6.5,
+      mirror: false,
     },
     {
       src: 'v1721880739/video3_izeynz',
       duration: 6.5,
+      mirror: true,
     },
     // {
     //   src: 'v1721930980/derma_demo_gfdb5s',
     //   duration: 10,
+    // mirror: false,
     // },
     {
       src: 'v1721885691/video3backup_j7ryry',
       duration: 6.5,
+      mirror: false,
     },
   ],
   screenSizes: [{ w: 900, mw: 600 }, { w: 1000, mw: 1000 }, { w: 2000, mw: 1001 }],
@@ -37,7 +41,8 @@ slides.initializeSlideElement = (slideEl, slideIndex) => {
 }
 slides.initializeNextSlideElement = () => {
   const nextSlideEl = document.querySelector('.next-slide');
-  slides.initializeSlideElement(nextSlideEl, slides.nextSlideIndex);
+  const index = slides.nextSlideIndex;
+  slides.initializeSlideElement(nextSlideEl, index);
 }
 slides.initializeCurrentSlideElement = () => {
   const currentSlideEl = document.querySelector('.current-slide');
@@ -46,10 +51,19 @@ slides.initializeCurrentSlideElement = () => {
 slides.setNextSlideAttributes = () => {
   const nextSlideEl = document.querySelector('.next-slide');
   const sources = nextSlideEl.querySelectorAll('source');
+  const index = slides.nextSlideIndex;
+  // const mirrorSlide = (b) => {
+  //   console.log(b);
+  //   if (b) 
+  //     nextSlideEl.classList.add('mirror');
+  //   else
+  //   nextSlideEl.classList.remove('mirror');
+  // }
+  // mirrorSlide(slides.properties[index].mirror);
 
-  c = 0;
+  c=0;
   sources.forEach((source) => {
-    source.src = `https://res.cloudinary.com/drrssdubw/video/upload/w_${slides.screenSizes[c].w}/${slides.properties[slides.nextSlideIndex].src}.mp4`;
+    source.src = `https://res.cloudinary.com/drrssdubw/video/upload/w_${slides.screenSizes[c].w}/${slides.properties[index].src}.mp4`;
     source.media = c <= 1 ? `(max-width: ${slides.screenSizes[c].mw}px)` : `(min-width: ${slides.screenSizes[c].mw}px)`;
     source.type = 'video/mp4';
     c++;
@@ -78,7 +92,7 @@ slides.nextSlide = () => {
   scheduleNextSlide();
 }
 
-slides.initializeCurrentSlideElement();
+// slides.initializeCurrentSlideElement();
 slides.initializeNextSlideElement();
 
 const scheduleNextSlide = () => {
