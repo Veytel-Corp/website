@@ -166,7 +166,7 @@ function setPlaceholderHeight() {
     }
     
     const navHeight = navEl.offsetHeight;
-    placeholderEl.style.height = homeHeight - navHeight + 'px';
+    placeholderEl.style.height = homeHeight - navHeight - 10 + 'px';
 
     return true;
 }

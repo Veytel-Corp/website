@@ -167,6 +167,10 @@ main#team-main::before {
         transition-duration: 0s !important;
     }
 
+    .member-con {
+        width: 60%;
+    }
+
     /* .member-con:hover .team-member-name-con h2 {
         bottom: 0;
     } */
