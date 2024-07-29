@@ -27,7 +27,12 @@
                 logos.forEach((logo) => {
                     logo.src = "./assets/svg/logos/logo_dark.svg"
                 });
-                headerEl.querySelector('.scrolling-nav').style = 'background-color: white !important; border-bottom: .2rem solid var(--primary-color)';
+                if (!headerEl.classList.contains('light-nav'))
+                    headerEl.querySelector('.scrolling-nav').style = 'background-color: white !important; border-bottom: .2rem solid var(--primary-color)';
+                else {
+                    const scrollingNav = headerEl.querySelector('.scrolling-nav');
+                    scrollingNav.querySelector('.main-logo').src = './assets/svg/logos/logo.svg'
+                }
             }
 
             const toLandingElements = document.querySelectorAll('a[href*="#landing"]');
