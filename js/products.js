@@ -31,7 +31,7 @@ productEngin.getActiveProductFromURL = () => {
     return activeProductName;
 }
 productEngin.setActiveProduct = (product) => {
-    productEngin.activeProduct = product;
+    productEngin.activeProduct = product || 'DERMA-AI';
 }
 productEngin.getActiveProductInfo = () => {
     const productInfo = productEngin.products.filter((product) => {
@@ -76,6 +76,7 @@ productEngin.updateDOM = () => {
 
     // Update element content
     // Hero Banner
+    console.log(activeProductInfo);
     nameEl.innerText = activeProductInfo.name;
     quickDescriptionEl.innerText = activeProductInfo.quickDescription;
     // Main Product Description
