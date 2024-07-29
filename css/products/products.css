@@ -13,8 +13,8 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 75%;
-    background: linear-gradient(to bottom, rgba(29, 0, 84, 0.5), transparent);
+    height: 50%;
+    background: linear-gradient(to bottom, white, transparent);
     pointer-events: none;
     z-index: 1;
 }
@@ -37,16 +37,23 @@
     color: var(--light-text-color);
 }
 
-ul#hero-nav {
+ul.hero-nav {
     padding: 1rem;
     display: flex;
     width: 100%;
     justify-content: space-around;
     border-bottom: solid var(--primary-color) .15rem;
+    background-color: white;
+    z-index: 999;
     
 }
 
-ul#hero-nav li{
+.fixed-hero-nav {
+    position: fixed;
+    top: 6rem;
+}
+
+ul.hero-nav li{
     font-family: var(--reg-font-family);
     font-weight: bold;
     color: var(--primary-color);
@@ -54,7 +61,7 @@ ul#hero-nav li{
     padding: 0 .5rem;
 }
 
-ul#hero-nav li:hover {
+ul.hero-nav li:hover {
     filter: brightness(150%);
 }
 
@@ -90,11 +97,11 @@ ul#hero-nav li:hover {
     min-height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .product-gif-con img {
-    width: 80%;
+    width: 50%;
     height: auto;
 }
 
@@ -120,6 +127,9 @@ ul#hero-nav li:hover {
 @media only screen and (max-width: 916px) {
     #products-hero {
         margin-top: var(--mobile-nav-height);
+    }
+    .fixed-hero-nav { 
+        top: var(--mobile-nav-height);
     }
 }
 
@@ -147,13 +157,13 @@ ul#hero-nav li:hover {
 }
 
 @media only screen and (max-width: 337px) {
-    ul#hero-nav li {
+    ul.hero-nav li {
         padding: 0;
     }
 }
 
 @media only screen and (max-width: 300px) {
-    ul#hero-nav li {
+    ul.hero-nav li {
         font-size: .8rem;
         padding: 0;
     }
