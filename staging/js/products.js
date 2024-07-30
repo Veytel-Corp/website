@@ -114,6 +114,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
 });
 
 document.addEventListener('scroll', function() {
+    if (window.innerWidth <= 1020) return
     const scrollingNavEl = document.querySelector('.scrolling-nav');
     const stationHeroNavEl = document.querySelector('.stationary-hero-nav');
     const fixedHeroNavEl = document.querySelector('.fixed-hero-nav'); 

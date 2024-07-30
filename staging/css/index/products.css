@@ -174,14 +174,15 @@
 
 
 .request-demo-form {
-    width: 60%;
     height: fit-content;
-    padding: 4rem 3rem;
+    min-height: 25rem;
+    width: 60%;
+    padding: 3rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: black solid .2rem;
     border-radius: .7rem;
     background-color: lightgray;
@@ -214,7 +215,7 @@
 }
 
 .request-demo-form h3 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .request-demo-form input#email {
@@ -222,8 +223,8 @@
     height: 4rem;
     border: solid black .1rem;
     border-radius: 1rem;
-    padding: 2rem 1rem;
-    font-size: 1rem;
+    padding: 3rem 2rem;
+    font-size: 2rem;
 }
 
 #close-request-demo-modal-btn {
@@ -236,14 +237,14 @@
 
 .request-demo-form button[type="submit"] {
     width: fit-content;
-    padding: .5rem 1rem;
+    padding: 1rem;
     background-color: var(--secondary-color-dark);
     border: solid black .1rem;
     border-radius: .7rem;
     font-family: var(--reg-font-family);
     color: white;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
