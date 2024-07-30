@@ -122,6 +122,9 @@ ul.hero-nav li:hover {
     #products-main section {
         width: 100%;
     }
+    .product-gif-con {
+        margin-top: 3rem;
+    }
 }
 
 @media only screen and (max-width: 916px) {
@@ -130,6 +133,10 @@ ul.hero-nav li:hover {
     }
     .fixed-hero-nav { 
         top: var(--mobile-nav-height);
+    }
+    #products-hero::before {
+        height: 25%;
+        background: linear-gradient(to bottom, rgba(29, 0, 84, 0.8), transparent);
     }
 }
 

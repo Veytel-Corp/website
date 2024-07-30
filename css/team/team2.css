@@ -125,6 +125,18 @@ main#team-main::before {
 }
 
 @media only screen and (max-width: 480px) {
+    #team-hero-background img {
+        padding-top: 1rem;
+    }
+    
+    main#team-main::before {
+        top: -8rem;
+        height: 8rem;
+    }
+    #team-title-con h1 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
     .team-member-name-con h2 {
         font-size: 1.5rem;
     }
