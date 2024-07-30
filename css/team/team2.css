@@ -90,6 +90,7 @@ main#team-main::before {
     width: 100%;
     max-height: fit-content;
     transform: translateY(.4rem);
+    text-align: center;
 }
 .team-img-con img{
     position: relative;
@@ -126,16 +127,27 @@ main#team-main::before {
 
 @media only screen and (max-width: 480px) {
     #team-hero-background img {
-        padding-top: 1rem;
+        padding-top: var(--mobile-nav-height);
+    }
+
+    main#team-main {
+        padding-top: 3rem;
     }
     
     main#team-main::before {
         top: -8rem;
         height: 8rem;
     }
+    #team-title-con {
+        padding-top: 2rem;
+        /* padding-top: var(--mobile-nav-height); */
+    }
     #team-title-con h1 {
-        font-size: 2rem !important;
+        font-size: 2.5rem;
         text-align: center;
+    }
+    .team-img-con img {
+        width: 80%;
     }
     .team-member-name-con h2 {
         font-size: 1.5rem;
