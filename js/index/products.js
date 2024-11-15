@@ -1,7 +1,7 @@
 const productBtnsManager = {
   productsPageURL: window.location.href.includes("staging")
-    ? "/staging/products.html"
-    : "/products.html",
+    ? "/staging/index.html#products"
+    : "/index.html#products",
   targetProduct: "",
 };
 productBtnsManager.getTargetURL = () => {
