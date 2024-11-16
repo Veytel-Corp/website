@@ -26,9 +26,22 @@ main {
 #landing video {
     width: 100%;
     height: auto;
-    /* z-index: -10; */
-    top: 0;
     filter:brightness(75%)
+}
+
+.slide {
+    transition-duration: 1s;
+}
+.current-slide {
+    opacity: 1 !important;
+    /* transition-duration: 1s; */
+}
+.next-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0 !important;
+    /* transition-duration: 1s; */
 }
 
 .intro-con {
@@ -83,22 +96,24 @@ main {
 }
 
 .lm-btn {
-    background-color: var(--nav-background);
+    background-color: var(--nav-background-2);
     color: var(--light-text-color);
     /* background-color: white;
     color: black; */
-    padding: 1rem 2.5rem;
+    padding: .7rem 2.5rem;
     margin-right: 1rem;
 }
 
 .cu-btn {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding: 1rem 1.5rem;
+    padding: .7rem 2.5rem;
 }
 
 
 .swoosh {
+    /* filter: hue-rotate(40deg) brightness(30%) saturate(200%); */
+    /* filter:; */
     position: fixed;
     z-index: 0;
     top: 0;

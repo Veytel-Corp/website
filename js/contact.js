@@ -13,7 +13,6 @@ formEl.addEventListener('submit', async (e)=> {
         const formObject = Object.fromEntries(formData.entries());
 
         try {
-            // const requestURL = "https://script.google.com/macros/s/AKfycbyWLGWbuyX_AXNWlYqCo6CLBTRhPBR1jrUlYFadbEgn066m-gF5lgDQmFZEr_3y7GYrRw/exec";
             const requestURL = "https://script.google.com/macros/s/AKfycby22ij9ioLxPK8tXGpKyJy5j_eqDyXHpoDZPVpLMv7XtRvT7WjqZ88sY_Uyw539Ygzl/exec";
             loaderEl.classList.remove('hidden');
             const response = await fetch(requestURL, {
@@ -32,6 +31,58 @@ formEl.addEventListener('submit', async (e)=> {
             console.error(err);
             loaderEl.classList.add('hidden');
             somethingWentWrongEl.classList.remove('hidden');
-            // errorEl.classList.remove('hidden');
         }
 });
+
+const textAreaEl = document.getElementById("message");
+const charCountEl = document.getElementById("char-count");
+
+const charCounter = {
+    count: 0,
+    maxCount: 800
+}
+charCounter.setCharCount = (count = false) => {
+    if (Number.isInteger*(count)) {
+        charCounter.count = count;
+    }
+    else {
+        charCounter.count = textAreaEl.value.length;
+    }
+}
+charCounter.updateDOM = (toMax = false) => {
+    if (toMax) {
+        const text = textAreaEl.value;
+        textAreaEl.value = text.substring(0, charCounter.maxCount);
+        charCounter.setCharCount(charCounter.maxCount);
+        charCounter.updateDOM();
+        return true;
+    }
+    charCountEl.innerText = `Character Count: ${charCounter.count}/${charCounter.maxCount}`;
+    return true;
+}
+charCounter.isMax = () => {
+    if (charCounter.count >= charCounter.maxCount) {
+        charCounter.updateDOM(true);
+        return true;
+    }
+    return false;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    charCounter.setCharCount();
+    charCounter.updateDOM();
+});
+
+textAreaEl.addEventListener('input', ()=> {
+    charCounter.setCharCount();
+    charCounter.updateDOM();
+    if (charCounter.isMax()) {
+        charCounter.setTextAreaToMax();
+    }
+})
+textAreaEl.addEventListener('beforeinput', (e) => {
+    if (charCounter.isMax() && e.inputType === 'insertText') {
+        e.preventDefault();
+    }
+});
+

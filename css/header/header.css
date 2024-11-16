@@ -107,6 +107,15 @@ nav.intro-nav ul li a {
     left: 0;
 }
 
+.dark-header .main-menu ul li a:hover {
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.dark-header .main-menu ul li a {
+    color: var(--primary-color);
+}
+
 .spacer-bar-vert {
     background-color: var(--primary-color);
     height: 2.3rem;
@@ -167,7 +176,7 @@ nav.scrolling-nav .logo {
     margin: 0;
     padding: 0;
     height: auto;
-    min-width: 15rem;
+    min-width: 16rem;
     cursor: pointer;
 }
 
@@ -193,6 +202,11 @@ nav .scrolling-nav-menu-btn-text {
 
 .revealed-scrolling-nav {
     top: 0 !important;
+    /* background-color: var(--nav-background-2) !important; */
+}
+
+.nav-background-2 {
+    background-color: var(--nav-background-2) !important;
 }
 
 @media only screen and (max-width: 1042px) {
@@ -241,7 +255,7 @@ nav .scrolling-nav-menu-btn-text {
         top: 0;
         height: var(--mobile-nav-height);
         align-items: center;
-        justify-content: space-between;
+        background-color: var(--nav-background-2) !important;
         padding: 0 7%;
     }
 

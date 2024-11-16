@@ -22,6 +22,19 @@
             const headerEl = document.querySelector('header');
             headerEl.innerHTML = data;
 
+            if (headerEl.classList.contains('dark-header')) {
+                const logos = headerEl.querySelectorAll('.main-logo');
+                logos.forEach((logo) => {
+                    logo.src = "./assets/svg/logos/logo_dark.svg"
+                });
+                if (!headerEl.classList.contains('light-nav'))
+                    headerEl.querySelector('.scrolling-nav').style = 'background-color: white !important; border-bottom: .2rem solid var(--primary-color)';
+                else {
+                    const scrollingNav = headerEl.querySelector('.scrolling-nav');
+                    scrollingNav.querySelector('.main-logo').src = './assets/svg/logos/logo.svg'
+                }
+            }
+
             const toLandingElements = document.querySelectorAll('a[href*="#landing"]');
 
             toLandingElements.forEach((el)=> {
@@ -98,8 +111,7 @@ function disableScroll() {
         window.scrollX ||
         document.documentElement.scrollLeft,
 
-        // if any scroll is attempted,
-        // set this to the previous value
+        // if any scroll is attempted, set this to the saved value
         window.onscroll = function () {
             window.scrollTo(scrollLeft, scrollTop);
         };
@@ -109,29 +121,34 @@ function enableScroll() {
     window.onscroll = function () { };
 }
 
+function isPageVerticallyScrollable() {
+    return document.documentElement.scrollHeight > window.innerHeight;
+}
+
 async function toggleScrollingNav() {
-    const pathname = window.location.pathname;
+    const scrollingNavEl = document.querySelector('.scrolling-nav');
+    if (!isPageVerticallyScrollable() && !isWidthLessThan(768)) {
+        scrollingNavEl.classList.add('hidden');
+        return;
+    }
     if (window.scrollY === 0) {
-        const scrollingNavEl = document.querySelector('.scrolling-nav');
+        
+        const swooshEl = document.querySelector('.swoosh');
         if(!scrollingNavEl) return false;
             const introNavEl = document.querySelector('.intro-nav');
             const mainMenuEl = document.querySelector('.main-menu');
             setTimeout(()=>{
-                introNavEl.classList.remove('hidden');
-                mainMenuEl.classList.remove('hidden');
+                introNavEl.classList.remove('hidden-inline');
+                mainMenuEl.classList.remove('hidden-inline');
             }, 10)
             scrollingNavEl.classList.remove("revealed-scrolling-nav");
+            scrollingNavEl.classList.remove("nav-background-2");
+            // swooshEl.classList.remove('no-filter');
+
     }
-    if (pathname != "/contact.html" && isAtBottom()) {
-        const scrollingNavEl = document.querySelector('.scrolling-nav');
-        if(!scrollingNavEl || isWidthLessThan(768)) return false;
-        scrollingNavEl.classList.add('hidden');
-    }
-    else {
-        const scrollingNavEl = document.querySelector('.scrolling-nav');
         if(!scrollingNavEl) return false;
         scrollingNavEl.classList.remove('hidden')
-    }
+    // }
 }
 function setPlaceholderHeight() {
     
@@ -154,7 +171,7 @@ function setPlaceholderHeight() {
     }
     
     const navHeight = navEl.offsetHeight;
-    placeholderEl.style.height = homeHeight - navHeight + 'px';
+    placeholderEl.style.height = homeHeight - navHeight - 10 + 'px';
 
     return true;
 }
@@ -179,11 +196,16 @@ const callback = (entries, observer) => {
             const scrollingNavEl = document.querySelector('.scrolling-nav');
             const introNavEl = document.querySelector('.intro-nav');
             const mainMenuEl = document.querySelector('.main-menu');
+            const swooshEl = document.querySelector('.swoosh');
             setTimeout(()=>{
-                introNavEl.classList.add('hidden');
-                mainMenuEl.classList.add('hidden');
+                introNavEl.classList.add('hidden-inline');
+                mainMenuEl.classList.add('hidden-inline');
             }, 10)
             scrollingNavEl.classList.add("revealed-scrolling-nav");
+            setTimeout(()=> {
+                scrollingNavEl.classList.add("nav-background-2");
+                // swooshEl.classList.add("no-filter");
+            }, 200)
         }
     });
 };
